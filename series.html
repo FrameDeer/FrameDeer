@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Movie Reviews - FrameDeer | Comprehensive Film Analysis & Ratings</title>
+  <meta name="description" content="Browse FrameDeer's comprehensive movie reviews collection. Filter by genre, search films, and discover detailed analysis of cinema from classic to contemporary.">
+  <meta name="keywords" content="movie reviews, film ratings, cinema analysis, movie database, film criticism, FrameDeer movies">
+  <link rel="stylesheet" href="movies.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo-title-container">
+        <a href="/index.html" class="logo-link">
+          <img src="/assets/logo/framedeer.png" alt="FrameDeer Logo - Movie Reviews and Ratings" class="nav-logo-img">
+        </a>
+        <a href="/index.html" class="nav-logo">FrameDeer</a>
+      </div>  
+      
+      <!-- Desktop Navigation -->
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/movies.html">Movies</a></li>
+        <li><a href="/series.html">Series</a></li>
+        <li><a href="/focus.html">Focus</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/tournament.html">Tournament</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <button class="close-menu" id="closeMenuBtn" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
+    <ul class="mobile-nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/movies.html">Movies</a></li>
+      <li><a href="/series.html">Series</a></li>
+      <li><a href="/focus.html">Focus</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/tournament.html">Tournament</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+  </div>
+
+  <main class="container">
+    <!-- Header -->
+    <header class="page-header">
+      <h1>Movie Reviews</h1>
+      <p>Discover compelling cinema through our professional critique lens. From indie gems to blockbusters, explore our comprehensive collection of film reviews.</p>
+    </header>
+
+    <!-- Filters and Controls -->
+    <section class="filters-controls">
+      <div class="filters">
+        <label for="genre">Genre:</label>
+        <select id="genre">
+          <option value="all">All Genres</option>
+          <option value="Drama">Drama</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Romance">Romance</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Biography">Biography</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Crime">Crime</option>
+          <option value="Action">Action</option>
+          <option value="War">War</option>
+          <option value="Mystery">Mystery</option>
+        </select>
+
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+          <option value="rating">Rating</option>
+          <option value="year">Year</option>
+          <option value="title">Title</option>
+        </select>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+          <label for="search" class="sr-only">Search movies</label>
+          <div class="search-input-wrapper">
+            <i class="fas fa-search search-icon" aria-hidden="true"></i>
+            <input type="text" id="search" placeholder="Search movies..." aria-label="Search movies by title">
+            <button type="button" id="clearSearch" class="clear-search" aria-label="Clear search" style="display: none;">
+              <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="view-mode">
+        <button id="gridView" class="active" aria-pressed="true">
+          <i class="fas fa-th" aria-hidden="true"></i>
+          <span>Grid</span>
+        </button>
+        <button id="listView" aria-pressed="false">
+          <i class="fas fa-list" aria-hidden="true"></i>
+          <span>List</span>
+        </button>
+        <span id="movieCount" class="movie-count">0 movies</span>
+      </div>
+    </section>
+
+    <!-- Movies Grid/List (rendered by JS) -->
+    <section id="moviesGrid" class="movies-grid grid-view" aria-live="polite"></section>
+
+    <!-- Load More Button -->
+    <div id="loadMoreContainer" class="load-more-container" style="display: none;">
+      <button id="loadMoreBtn" class="load-more-btn">
+        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        Load More Movies
+        <span id="remainingCount" class="remaining-count"></span>
+      </button>
+    </div>
+  </main>
+
+  <script>
+    // Series Data
+    const sampleMovies = [
+      {
+        id: "truedetective",
+        title: "True Detective",
+        poster: "/assets/movieimages/truedetective.jpg",
+        rating: 8.8,
+        year: 2010,
+        genre: "Sci-Fi",
+        runtime: 148,
+        snippet: "True Detective is mindblowing",
+        href: "/SeriesReviews/truedetective.html"
+      },
+      
+    ];
+
+    // State
+    let viewMode = 'grid'; // 'grid' or 'list'
+    let sortBy = 'rating';
+    let filterGenre = 'all';
+    let searchQuery = '';
+    let currentPage = 1;
+    const moviesPerPage = 12; // Changed from 50 to 12 for better UX with movie posters
+    let movies = [...sampleMovies]; // base
+
+    // DOM
+    const moviesGrid = document.getElementById('moviesGrid');
+    const genreSelect = document.getElementById('genre');
+    const sortSelect = document.getElementById('sort');
+    const searchInput = document.getElementById('search');
+    const clearSearchBtn = document.getElementById('clearSearch');
+    const gridBtn = document.getElementById('gridView');
+    const listBtn = document.getElementById('listView');
+    const movieCountEl = document.getElementById('movieCount');
+    const loadMoreContainer = document.getElementById('loadMoreContainer');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const remainingCountEl = document.getElementById('remainingCount');
+
+    // Filter movies based on search query
+    function filterMoviesBySearch(movies, query) {
+      if (!query.trim()) return movies;
+      
+      const searchTerm = query.toLowerCase().trim();
+      return movies.filter(movie => 
+        movie.title.toLowerCase().includes(searchTerm) ||
+        movie.genre.toLowerCase().includes(searchTerm) ||
+        movie.snippet.toLowerCase().includes(searchTerm)
+      );
+    }
+
+    // Get paginated movies
+    function getPaginatedMovies(movies, page, perPage) {
+      const startIndex = (page - 1) * perPage;
+      const endIndex = startIndex + perPage;
+      return movies.slice(0, endIndex); // Load all movies up to current page
+    }
+
+    // Check if there are more movies to load
+    function hasMoreMovies(movies, page, perPage) {
+      return page * perPage < movies.length;
+    }
+
+    // Render function
+    function renderMovies(resetPage = false) {
+      if (resetPage) {
+        currentPage = 1;
+      }
+
+      // filter by genre and search
+      const genreFiltered = movies.filter(m => filterGenre === 'all' || m.genre === filterGenre);
+      const searchFiltered = filterMoviesBySearch(genreFiltered, searchQuery);
+
+      // sort
+      const sorted = searchFiltered.slice().sort((a, b) => {
+        if (sortBy === 'rating') return b.rating - a.rating;
+        if (sortBy === 'year') return b.year - a.year;
+        if (sortBy === 'title') return a.title.localeCompare(b.title);
+        return 0;
+      });
+
+      // get paginated results
+      const paginatedMovies = getPaginatedMovies(sorted, currentPage, moviesPerPage);
+      const totalFilteredMovies = sorted.length;
+      const hasMore = hasMoreMovies(sorted, currentPage, moviesPerPage);
+
+      // update count - show both loaded and total
+      const loadedCount = paginatedMovies.length;
+      movieCountEl.textContent = `${loadedCount} of ${totalFilteredMovies} movie${totalFilteredMovies !== 1 ? 's' : ''}`;
+
+      // show/hide load more button
+      if (hasMore && totalFilteredMovies > moviesPerPage) {
+        loadMoreContainer.style.display = 'block';
+        const remaining = totalFilteredMovies - loadedCount;
+        remainingCountEl.textContent = `(${remaining} more)`;
+      } else {
+        loadMoreContainer.style.display = 'none';
+      }
+
+      // render movies
+      moviesGrid.innerHTML = '';
+      
+      if (paginatedMovies.length === 0) {
+        moviesGrid.innerHTML = `
+          <div class="no-results">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <h3>No movies found</h3>
+            <p>Try adjusting your search or filter criteria</p>
+          </div>
+        `;
+        return;
+      }
+
+      paginatedMovies.forEach(m => {
+        // create anchor card
+        const a = document.createElement('a');
+        a.className = 'movie-card';
+        a.href = m.href;
+        a.setAttribute('aria-label', `${m.title} (${m.year}) - open review page`);
+        a.innerHTML = `
+          <div class="card-inner">
+            <div class="card-media">
+              <img src="${m.poster}" alt="${m.title} poster" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="title">${m.title}</h3>
+              <div class="meta-line">
+                <span class="meta year">${m.year}</span>
+                <span class="meta sep">|</span>
+                <span class="meta genre">${m.genre}</span>
+                <span class="meta sep">|</span>
+                <span class="meta runtime">${m.runtime} min</span>
+              </div>
+              <p class="rating">${m.rating.toFixed(1)}</p>
+              <p class="review-snippet">${m.snippet}</p>
+            </div>
+          </div>
+        `;
+        moviesGrid.appendChild(a);
+      });
+
+      // update view classes so CSS hides/shows appropriately
+      if (viewMode === 'grid') {
+        moviesGrid.classList.add('grid-view');
+        moviesGrid.classList.remove('list-view');
+      } else {
+        moviesGrid.classList.add('list-view');
+        moviesGrid.classList.remove('grid-view');
+      }
+
+      // Scroll to top when filters change (but not when loading more)
+      if (resetPage) {
+        window.scrollTo({ top: moviesGrid.offsetTop - 100, behavior: 'smooth' });
+      }
+    }
+
+    // Load more movies
+    function loadMoreMovies() {
+      currentPage++;
+      renderMovies(false);
+
+    }
+
+    // Event handlers
+    genreSelect.addEventListener('change', (e) => {
+      filterGenre = e.target.value;
+      renderMovies(true); // Reset to page 1
+    });
+
+    sortSelect.addEventListener('change', (e) => {
+      sortBy = e.target.value;
+      renderMovies(true); // Reset to page 1
+    });
+
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      // Show/hide clear button
+      clearSearchBtn.style.display = searchQuery ? 'flex' : 'none';
+      renderMovies(true); // Reset to page 1
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
+      clearSearchBtn.style.display = 'none';
+      renderMovies(true); // Reset to page 1
+      searchInput.focus();
+    });
+
+    // Clear search on Escape key
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        searchInput.value = '';
+        searchQuery = '';
+        clearSearchBtn.style.display = 'none';
+        renderMovies(true); // Reset to page 1
+      }
+    });
+
+    gridBtn.addEventListener('click', () => {
+      viewMode = 'grid';
+      gridBtn.classList.add('active');
+      gridBtn.setAttribute('aria-pressed', 'true');
+      listBtn.classList.remove('active');
+      listBtn.setAttribute('aria-pressed', 'false');
+      renderMovies(false); // Keep current page
+    });
+
+    listBtn.addEventListener('click', () => {
+      viewMode = 'list';
+      listBtn.classList.add('active');
+      listBtn.setAttribute('aria-pressed', 'true');
+      gridBtn.classList.remove('active');
+      gridBtn.setAttribute('aria-pressed', 'false');
+      renderMovies(false); // Keep current page
+    });
+
+    loadMoreBtn.addEventListener('click', loadMoreMovies);
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+    
+    function toggleMobileMenu() {
+      const isActive = mobileMenuOverlay.classList.contains('active');
+      
+      if (isActive) {
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        mobileMenuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      }
+    }
+    
+    function closeMobileMenu() {
+      mobileMenuOverlay.classList.remove('active');
+      document.body.style.overflow = 'auto';
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    }
+    
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    closeMenuBtn.addEventListener('click', closeMobileMenu);
+    
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+    
+    mobileMenuOverlay.addEventListener('click', (e) => {
+      if (e.target === mobileMenuOverlay) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close mobile menu on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+        closeMobileMenu();
+      }
+    });
+
+    // initial render
+    renderMovies(true);
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Social Media Section -->
+        <div class="footer-social">
+          <h4>Follow FrameDeer</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/framedeer" aria-label="Follow FrameDeer on Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com/FrameDeer" aria-label="Follow FrameDeer on Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/@FrameDeer" aria-label="Follow FrameDeer on YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Simple Legal Links -->
+        <div class="footer-legal">
+          <a href="/Docs/DISCLAIMER.pdf">Disclaimer</a>
+          <span>•</span>
+          <a href="/Docs/PRIVACY POLICY DOCUMENT.pdf">Privacy</a>
+        </div>
+        
+        <!-- Attribution Section -->
+        <div class="footer-attribution">
+          <p>This site uses information from IMDb, Letterboxd, Wikipedia, and other public sources for educational purposes under Fair Use.</p>
+          <p>All trademarks belong to their respective owners. No copyright infringement intended.</p>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> FrameDeer - Use For Educational Purposes</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

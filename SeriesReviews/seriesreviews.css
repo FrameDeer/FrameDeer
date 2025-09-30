@@ -967,3 +967,146 @@ a:hover {
     padding: 1.5rem;
   }
 }
+
+
+/* Episodes Section */
+.episodes {
+  margin: 3rem 0;
+  background: var(--secondary);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+}
+
+.episodes h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.5rem;
+}
+
+/* Season Dropdown */
+.season-dropdown {
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.season-toggle {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: var(--foreground);
+  font-family: var(--font-body);
+  transition: all 0.3s ease;
+}
+
+.season-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.season-toggle.active {
+  background: rgba(247, 201, 72, 0.1);
+  border-bottom: 1px solid rgba(247, 201, 72, 0.3);
+}
+
+.season-toggle h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+.season-toggle i {
+  transition: transform 0.3s ease;
+  color: var(--primary);
+}
+
+.season-toggle.active i {
+  transform: rotate(180deg);
+}
+
+/* Episode List */
+.episode-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.episode-list.active {
+  max-height: 500px; /* Adjust based on your content */
+}
+
+.episode-item {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--foreground-muted);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.episode-item:last-child {
+  border-bottom: none;
+}
+
+.episode-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--foreground);
+  padding-left: 2rem;
+}
+
+/* Responsive Design for Episodes */
+@media (max-width: 768px) {
+  .episodes {
+    padding: 1.5rem;
+  }
+  
+  .season-toggle {
+    padding: 1.25rem;
+  }
+  
+  .season-toggle h3 {
+    font-size: 1.1rem;
+  }
+  
+  .episode-item {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .episode-item:hover {
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .episodes {
+    padding: 1rem;
+  }
+  
+  .season-toggle {
+    padding: 1rem;
+  }
+  
+  .season-toggle h3 {
+    font-size: 1rem;
+  }
+  
+  .episode-item {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .episode-item:hover {
+    padding-left: 1.25rem;
+  }
+}

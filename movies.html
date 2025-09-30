@@ -174,7 +174,7 @@
         genre: "Biography",
         runtime: 180,
         snippet: "A wild, satirical look at excess and ambition, anchored by DiCaprio's energetic performance.",
-        href: "/moviereviews/wolfofwallstreet.html"
+        href: "/moviereviews/thewolfowallstreet.html"
       },
       {
         id: "catchme",
@@ -438,7 +438,6 @@
     // Render function
     function renderMovies(resetPage = false) {
       if (resetPage) {
-        currentPage = 1;
       }
 
       // filter by genre and search
@@ -524,7 +523,6 @@
 
       // Scroll to top when filters change (but not when loading more)
       if (resetPage) {
-        window.scrollTo({ top: moviesGrid.offsetTop - 100, behavior: 'smooth' });
       }
     }
 

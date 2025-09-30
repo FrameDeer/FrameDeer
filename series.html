@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Movie Reviews - FrameDeer | Comprehensive Film Analysis & Ratings</title>
-  <meta name="description" content="Browse FrameDeer's comprehensive movie reviews collection. Filter by genre, search films, and discover detailed analysis of cinema from classic to contemporary.">
-  <meta name="keywords" content="movie reviews, film ratings, cinema analysis, movie database, film criticism, FrameDeer movies">
+  <title>Series Reviews - FrameDeer | Comprehensive TV Series Analysis & Ratings</title>
+  <meta name="description" content="Browse FrameDeer's comprehensive TV series reviews collection. Filter by genre, search shows, and discover detailed analysis of television from classic to contemporary.">
+  <meta name="keywords" content="series reviews, TV show ratings, television analysis, series database, TV criticism, FrameDeer series">
   <link rel="stylesheet" href="movies.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -61,9 +61,9 @@
   <main class="container">
     <!-- Header -->
     <header class="page-header">
-      <h1>Movie Reviews</h1>
-      <p>Discover compelling cinema through our professional critique lens. From indie gems to blockbusters, explore our comprehensive collection of film reviews.</p>
-    </header>
+          <h1>Series Reviews</h1>
+      <p>Explore exceptional television through our professional critique lens. From gripping dramas to binge-worthy comedies, discover our comprehensive collection of series reviews.</p>
+     </header>
 
     <!-- Filters and Controls -->
     <section class="filters-controls">
@@ -135,7 +135,7 @@
       {
         id: "truedetective",
         title: "True Detective",
-        poster: "/assets/movieimages/truedetective.jpg",
+        poster: "/assets/seriesimages/truedetective.png",
         rating: 8.8,
         year: 2010,
         genre: "Sci-Fi",
@@ -195,7 +195,6 @@
     // Render function
     function renderMovies(resetPage = false) {
       if (resetPage) {
-        currentPage = 1;
       }
 
       // filter by genre and search
@@ -281,7 +280,6 @@
 
       // Scroll to top when filters change (but not when loading more)
       if (resetPage) {
-        window.scrollTo({ top: moviesGrid.offsetTop - 100, behavior: 'smooth' });
       }
     }
 

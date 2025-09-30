@@ -35,9 +35,9 @@
       
       <!-- Mobile Menu Button -->
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span class="menu-line menu-line-1"></span>
+        <span class="menu-line menu-line-2"></span>
+        <span class="menu-line menu-line-3"></span>
       </button>
     </div>
   </nav>
@@ -45,7 +45,6 @@
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
     <button class="close-menu" id="closeMenuBtn" aria-label="Close mobile menu">
-      <i class="fas fa-times"></i>
     </button>
     <ul class="mobile-nav-links">
       <li><a href="/index.html">Home</a></li>
@@ -1212,42 +1211,40 @@
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
     
+    // Toggle mobile menu
     function toggleMobileMenu() {
       const isActive = mobileMenuOverlay.classList.contains('active');
       
       if (isActive) {
         mobileMenuOverlay.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
         document.body.style.overflow = 'auto';
-        mobileMenuBtn.setAttribute('aria-expanded', 'false');
       } else {
         mobileMenuOverlay.classList.add('active');
+        mobileMenuBtn.classList.add('active');
         document.body.style.overflow = 'hidden';
-        mobileMenuBtn.setAttribute('aria-expanded', 'true');
       }
     }
     
+    // Close mobile menu
     function closeMobileMenu() {
       mobileMenuOverlay.classList.remove('active');
+      mobileMenuBtn.classList.remove('active');
       document.body.style.overflow = 'auto';
-      mobileMenuBtn.setAttribute('aria-expanded', 'false');
     }
     
+    // Event listeners
     mobileMenuBtn.addEventListener('click', toggleMobileMenu);
     closeMenuBtn.addEventListener('click', closeMobileMenu);
     
+    // Close mobile menu when a link is clicked
     mobileNavLinks.forEach(link => {
       link.addEventListener('click', closeMobileMenu);
     });
     
+    // Close mobile menu when clicking outside the menu
     mobileMenuOverlay.addEventListener('click', (e) => {
       if (e.target === mobileMenuOverlay) {
-        closeMobileMenu();
-      }
-    });
-
-    // Close mobile menu on Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
         closeMobileMenu();
       }
     });

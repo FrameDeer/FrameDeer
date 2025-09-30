@@ -34,18 +34,18 @@
       
       <!-- Mobile Menu Button -->
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span class="menu-line menu-line-1"></span>
+        <span class="menu-line menu-line-2"></span>
+        <span class="menu-line menu-line-3"></span>
       </button>
     </div>
   </nav>
   
+
+  
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-    <button class="close-menu" id="closeMenuBtn" aria-label="Close mobile menu">
-      <i class="fas fa-times"></i>
-    </button>
+
     <ul class="mobile-nav-links">
       <li><a href="/index.html">Home</a></li>
       <li><a href="/movies.html">Movies</a></li>
@@ -181,7 +181,7 @@
 
   <script>
   
-    // Mobile menu functionality
+        // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
@@ -193,9 +193,11 @@
       
       if (isActive) {
         mobileMenuOverlay.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
         document.body.style.overflow = 'auto';
       } else {
         mobileMenuOverlay.classList.add('active');
+        mobileMenuBtn.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
     }
@@ -203,6 +205,7 @@
     // Close mobile menu
     function closeMobileMenu() {
       mobileMenuOverlay.classList.remove('active');
+      mobileMenuBtn.classList.remove('active');
       document.body.style.overflow = 'auto';
     }
     
@@ -221,6 +224,7 @@
         closeMobileMenu();
       }
     });
+;
     
   </script>
 </body>

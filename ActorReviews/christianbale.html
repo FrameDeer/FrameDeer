@@ -6,8 +6,7 @@
   <title>Christian Bale - Profile</title>
   <link rel="stylesheet" href="/ActorReviews/reviews.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -41,10 +40,11 @@
     </div>
   </nav>
   
-  
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-
+    <button class="close-menu" id="closeMenuBtn" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
     <ul class="mobile-nav-links">
       <li><a href="/index.html">Home</a></li>
       <li><a href="/movies.html">Movies</a></li>
@@ -63,7 +63,14 @@
       <div class="actor-info">
         <h1>Christian Bale</h1>
         <p><strong>Date of Birth:</strong> January 30, 1974</p>
+        <p><strong>Location of Birth:</strong> Haverfordwest, Pembrokeshire, Wales</p>
+        <p><strong>Height:</strong> 6'0" (183 cm)</p>
         <p class="bio">Christian Bale is an Academy Award-winning actor renowned for his intense method acting and dramatic physical transformations for roles. With a career spanning from childhood stardom to acclaimed adult performances, he has established himself as one of the most dedicated and versatile actors of his generation.</p>
+        
+        <div class="early-career">
+          <h3>Early Career</h3>
+          <p>Christian Bale began his acting career as a child actor, making his film debut at age 13 in Steven Spielberg's <em>Empire of the Sun</em> (1987), for which he received widespread critical acclaim. He continued working in film and television throughout his teenage years, including roles in <em>Newsies</em> (1992) and <em>Little Women</em> (1994). His breakthrough adult role came as Patrick Bateman in <em>American Psycho</em> (2000), which established him as a serious actor willing to take on challenging and transformative roles.</p>
+        </div>
       </div>
     </section>
 
@@ -81,45 +88,80 @@
 
     <!-- Filmography -->
     <section class="filmography">
-      <h2>Movies</h2>
+      <h2>Filmography</h2>
       <div class="movie-grid">
-        <a href="/MovieReviews/dark-knight.html" class="movie-card">
-          <img src="/assets/MovieImages/DarkKnight.jpg" alt="The Dark Knight Poster">
+        <!-- Major Movies with MovieImages -->
+        <a href="/moviereviews/thedarkknight.html" class="movie-card">
+          <img src="/assets/MovieImages/thedarkknight.jpg" alt="The Dark Knight Poster">
           <p>The Dark Knight (2008)</p>
         </a>
-        <a href="/MovieReviews/american-psycho.html" class="movie-card">
-          <img src="/assets/MovieImages/AmericanPsycho.jpg" alt="American Psycho Poster">
+        <a href="/moviereviews/americanpsycho.html" class="movie-card">
+          <img src="/assets/MovieImages/americanpsycho.jpg" alt="American Psycho Poster">
           <p>American Psycho (2000)</p>
         </a>
-        <a href="/MovieReviews/fighter.html" class="movie-card">
-          <img src="/assets/MovieImages/TheFighter.jpg" alt="The Fighter Poster">
+        <a href="/moviereviews/thefighter.html" class="movie-card">
+          <img src="/assets/MovieImages/thefighter.jpg" alt="The Fighter Poster">
           <p>The Fighter (2010)</p>
         </a>
-        <a href="/MovieReviews/machinist.html" class="movie-card">
-          <img src="/assets/MovieImages/TheMachinist.jpg" alt="The Machinist Poster">
+        <a href="/moviereviews/themachinist.html" class="movie-card">
+          <img src="/assets/MovieImages/themachinist.jpg" alt="The Machinist Poster">
           <p>The Machinist (2004)</p>
         </a>
-        <a href="/MovieReviews/prestige.html" class="movie-card">
-          <img src="/assets/MovieImages/ThePrestige.jpg" alt="The Prestige Poster">
+        <a href="/moviereviews/theprestige.html" class="movie-card">
+          <img src="/assets/MovieImages/theprestige.jpg" alt="The Prestige Poster">
           <p>The Prestige (2006)</p>
         </a>
-        <a href="/MovieReviews/american-hustle.html" class="movie-card">
-          <img src="/assets/MovieImages/AmericanHustle.jpg" alt="American Hustle Poster">
+        <a href="/moviereviews/americanhustle.html" class="movie-card">
+          <img src="/assets/MovieImages/americanhustle.jpg" alt="American Hustle Poster">
           <p>American Hustle (2013)</p>
         </a>
-        <a href="/MovieReviews/vice.html" class="movie-card">
-          <img src="/assets/MovieImages/Vice.jpg" alt="Vice Poster">
+        <a href="/moviereviews/vice.html" class="movie-card">
+          <img src="/assets/MovieImages/vice.jpg" alt="Vice Poster">
           <p>Vice (2018)</p>
         </a>
-        <a href="/MovieReviews/empire-sun.html" class="movie-card">
-          <img src="/assets/MovieImages/EmpireSun.jpg" alt="Empire of the Sun Poster">
+        <a href="/moviereviews/empireofthesun.html" class="movie-card">
+          <img src="/assets/MovieImages/empireofthesun.jpg" alt="Empire of the Sun Poster">
           <p>Empire of the Sun (1987)</p>
+        </a>
+        
+        <!-- Non-major movies without MovieImages -->
+        <a href="/moviereviews/batmanbegins.html" class="movie-card">
+          <img src="/assets/batmanbegins.jpg" alt="Batman Begins Poster">
+          <p>Batman Begins (2005)</p>
+        </a>
+        <a href="/moviereviews/thedarkknightrises.html" class="movie-card">
+          <img src="/assets/thedarkknightrises.jpg" alt="The Dark Knight Rises Poster">
+          <p>The Dark Knight Rises (2012)</p>
+        </a>
+        <a href="/moviereviews/thebigshort.html" class="movie-card">
+          <img src="/assets/thebigshort.jpg" alt="The Big Short Poster">
+          <p>The Big Short (2015)</p>
+        </a>
+        <a href="/moviereviews/fordvferrari.html" class="movie-card">
+          <img src="/assets/fordvferrari.jpg" alt="Ford v Ferrari Poster">
+          <p>Ford v Ferrari (2019)</p>
+        </a>
+        <a href="/moviereviews/equilibrium.html" class="movie-card">
+          <img src="/assets/equilibrium.jpg" alt="Equilibrium Poster">
+          <p>Equilibrium (2002)</p>
+        </a>
+        <a href="/moviereviews/hostiles.html" class="movie-card">
+          <img src="/assets/hostiles.jpg" alt="Hostiles Poster">
+          <p>Hostiles (2017)</p>
+        </a>
+        <a href="/moviereviews/3-10toyuma.html" class="movie-card">
+          <img src="/assets/310toyuma.jpg" alt="3:10 to Yuma Poster">
+          <p>3:10 to Yuma (2007)</p>
+        </a>
+        <a href="/moviereviews/publicenemies.html" class="movie-card">
+          <img src="/assets/publicenemies.jpg" alt="Public Enemies Poster">
+          <p>Public Enemies (2009)</p>
         </a>
       </div>
     </section>
   </main>
 
-              <!-- Footer -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -161,8 +203,7 @@
   </footer>
 
   <script>
-  
-        // Mobile menu functionality
+    // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
@@ -205,8 +246,6 @@
         closeMobileMenu();
       }
     });
-;
-    
   </script>
 </body>
 </html>

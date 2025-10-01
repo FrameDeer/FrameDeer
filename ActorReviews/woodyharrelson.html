@@ -6,8 +6,7 @@
   <title>Woody Harrelson - Profile</title>
   <link rel="stylesheet" href="/ActorReviews/reviews.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -41,9 +40,11 @@
     </div>
   </nav>
   
-
-  
-
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <button class="close-menu" id="closeMenuBtn" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
     <ul class="mobile-nav-links">
       <li><a href="/index.html">Home</a></li>
       <li><a href="/movies.html">Movies</a></li>
@@ -62,8 +63,15 @@
       <div class="actor-info">
         <h1>Woody Harrelson</h1>
         <p><strong>Date of Birth:</strong> July 23, 1961</p>
+        <p><strong>Location of Birth:</strong> Midland, Texas, USA</p>
+        <p><strong>Height:</strong> 5'10" (178 cm)</p>
         <p><strong>Nationality:</strong> American</p>
         <p class="bio">Woody Harrelson is an Academy Award-nominated actor known for his versatile performances across comedy and drama. Rising to fame on the television series <em>Cheers</em>, he has since built an impressive film career spanning over three decades, with memorable roles in everything from blockbuster action films to intimate character studies.</p>
+        
+        <div class="early-career">
+          <h3>Early Career</h3>
+          <p>Woody Harrelson began his acting career in theater after graduating from Hanover College with a degree in theater arts and English. He moved to New York City and performed in off-Broadway productions before landing his breakthrough role as the naive bartender Woody Boyd on the hit NBC sitcom <em>Cheers</em> in 1985. He remained on the show for eight seasons, earning an Emmy Award for his performance. His film career started with small roles in movies like <em>Wildcats</em> (1986) and <em>Cool Blue</em> (1988), but his major film breakthrough came with Oliver Stone's <em>Natural Born Killers</em> (1994), which established him as a serious film actor beyond his television persona.</p>
+        </div>
       </div>
     </section>
 
@@ -83,73 +91,103 @@
 
     <!-- Filmography -->
     <section class="filmography">
-      <h2>Notable Movies</h2>
+      <h2>Filmography</h2>
       <div class="movie-grid">
-        <a href="/MovieReviews/three-billboards.html" class="movie-card">
-          <img src="/assets/MovieImages/ThreeBillboards.jpg" alt="Three Billboards Outside Ebbing, Missouri Poster">
+        <!-- Major Movies with MovieImages -->
+        <a href="/moviereviews/threebillboardsoutsideebbingmissouri.html" class="movie-card">
+          <img src="/assets/MovieImages/threebillboardsoutsideebbingmissouri.jpg" alt="Three Billboards Outside Ebbing, Missouri Poster">
           <p>Three Billboards Outside Ebbing, Missouri (2017)</p>
         </a>
-        <a href="/MovieReviews/natural-born-killers.html" class="movie-card">
-          <img src="/assets/MovieImages/NaturalBornKillers.jpg" alt="Natural Born Killers Poster">
+        <a href="/moviereviews/naturalbornkillers.html" class="movie-card">
+          <img src="/assets/MovieImages/naturalbornkillers.jpg" alt="Natural Born Killers Poster">
           <p>Natural Born Killers (1994)</p>
         </a>
-        <a href="/MovieReviews/people-vs-larry-flynt.html" class="movie-card">
-          <img src="/assets/MovieImages/PeopleVsLarryFlynt.jpg" alt="The People vs. Larry Flynt Poster">
+        <a href="/moviereviews/thepeoplevslarryflynt.html" class="movie-card">
+          <img src="/assets/MovieImages/thepeoplevslarryflynt.jpg" alt="The People vs. Larry Flynt Poster">
           <p>The People vs. Larry Flynt (1996)</p>
         </a>
-        <a href="/MovieReviews/zombieland.html" class="movie-card">
-          <img src="/assets/MovieImages/Zombieland.jpg" alt="Zombieland Poster">
+        <a href="/moviereviews/zombieland.html" class="movie-card">
+          <img src="/assets/MovieImages/zombieland.jpg" alt="Zombieland Poster">
           <p>Zombieland (2009)</p>
         </a>
-        <a href="/MovieReviews/now-you-see-me.html" class="movie-card">
-          <img src="/assets/MovieImages/NowYouSeeMe.jpg" alt="Now You See Me Poster">
+        <a href="/moviereviews/nowyouseeme.html" class="movie-card">
+          <img src="/assets/MovieImages/nowyouseeme.jpg" alt="Now You See Me Poster">
           <p>Now You See Me (2013)</p>
         </a>
-        <a href="/MovieReviews/true-detective.html" class="movie-card">
-          <img src="/assets/MovieImages/TrueDetective.jpg" alt="True Detective Poster">
+        <a href="/moviereviews/truedetective.html" class="movie-card">
+          <img src="/assets/MovieImages/truedetective.jpg" alt="True Detective Poster">
           <p>True Detective (2014)</p>
         </a>
-        <a href="/MovieReviews/white-men-cant-jump.html" class="movie-card">
-          <img src="/assets/MovieImages/WhiteMenCantJump.jpg" alt="White Men Can't Jump Poster">
+        <a href="/moviereviews/whitemencantjump.html" class="movie-card">
+          <img src="/assets/MovieImages/whitemencantjump.jpg" alt="White Men Can't Jump Poster">
           <p>White Men Can't Jump (1992)</p>
         </a>
-        <a href="/MovieReviews/cheers.html" class="movie-card">
-          <img src="/assets/MovieImages/Cheers.jpg" alt="Cheers Poster">
+        <a href="/moviereviews/cheers.html" class="movie-card">
+          <img src="/assets/MovieImages/cheers.jpg" alt="Cheers Poster">
           <p>Cheers (1985-1993)</p>
         </a>
-        <a href="/MovieReviews/rage.html" class="movie-card">
-          <img src="/assets/MovieImages/Rage.jpg" alt="Rampart Poster">
+        <a href="/moviereviews/rampart.html" class="movie-card">
+          <img src="/assets/MovieImages/rampart.jpg" alt="Rampart Poster">
           <p>Rampart (2011)</p>
         </a>
-        <a href="/MovieReviews/the-messenger.html" class="movie-card">
-          <img src="/assets/MovieImages/TheMessenger.jpg" alt="The Messenger Poster">
+        <a href="/moviereviews/themessenger.html" class="movie-card">
+          <img src="/assets/MovieImages/themessenger.jpg" alt="The Messenger Poster">
           <p>The Messenger (2009)</p>
         </a>
-        <a href="/MovieReviews/war-for-the-planet.html" class="movie-card">
-          <img src="/assets/MovieImages/WarForThePlanet.jpg" alt="War for the Planet of the Apes Poster">
+        <a href="/moviereviews/warfortheplanetoftheapes.html" class="movie-card">
+          <img src="/assets/MovieImages/warfortheplanetoftheapes.jpg" alt="War for the Planet of the Apes Poster">
           <p>War for the Planet of the Apes (2017)</p>
         </a>
-        <a href="/MovieReviews/solo-star-wars.html" class="movie-card">
-          <img src="/assets/MovieImages/SoloStarWars.jpg" alt="Solo: A Star Wars Story Poster">
+        <a href="/moviereviews/soloastarwarsstory.html" class="movie-card">
+          <img src="/assets/MovieImages/soloastarwarsstory.jpg" alt="Solo: A Star Wars Story Poster">
           <p>Solo: A Star Wars Story (2018)</p>
         </a>
-        <a href="/MovieReviews/venom.html" class="movie-card">
-          <img src="/assets/MovieImages/Venom.jpg" alt="Venom Poster">
+        <a href="/moviereviews/venom.html" class="movie-card">
+          <img src="/assets/MovieImages/venom.jpg" alt="Venom Poster">
           <p>Venom (2018)</p>
         </a>
-        <a href="/MovieReviews/transcendence.html" class="movie-card">
-          <img src="/assets/MovieImages/Transcendence.jpg" alt="Transcendence Poster">
+        <a href="/moviereviews/transcendence.html" class="movie-card">
+          <img src="/assets/MovieImages/transcendence.jpg" alt="Transcendence Poster">
           <p>Transcendence (2014)</p>
         </a>
-        <a href="/MovieReviews/out-of-furnace.html" class="movie-card">
-          <img src="/assets/MovieImages/OutOfTheFurnace.jpg" alt="Out of the Furnace Poster">
+        <a href="/moviereviews/outofthefurnace.html" class="movie-card">
+          <img src="/assets/MovieImages/outofthefurnace.jpg" alt="Out of the Furnace Poster">
           <p>Out of the Furnace (2013)</p>
         </a>
+      </div>
+      
+      <!-- Non-major movies without images -->
+      <div class="text-movie-list">
+        <h3>Other Notable Films</h3>
+        <div class="text-movie-grid">
+          <a href="/moviereviews/wildcats.html" class="text-movie-link">Wildcats (1986)</a>
+          <a href="/moviereviews/coolblue.html" class="text-movie-link">Cool Blue (1988)</a>
+          <a href="/moviereviews/lacrosse.html" class="text-movie-link">L.A. Story (1991)</a>
+          <a href="/moviereviews/doc.html" class="text-movie-link">Doc Hollywood (1991)</a>
+          <a href="/moviereviews/indecentproposal.html" class="text-movie-link">Indecent Proposal (1993)</a>
+          <a href="/moviereviews/money.html" class="text-movie-link">Money Train (1995)</a>
+          <a href="/moviereviews/kingpin.html" class="text-movie-link">Kingpin (1996)</a>
+          <a href="/moviereviews/wag.html" class="text-movie-link">The Cowboy Way (1994)</a>
+          <a href="/moviereviews/palmetto.html" class="text-movie-link">Palmetto (1998)</a>
+          <a href="/moviereviews/edtv.html" class="text-movie-link">EDtv (1999)</a>
+          <a href="/moviereviews/angermanagement.html" class="text-movie-link">Anger Management (2003)</a>
+          <a href="/moviereviews/shehatesme.html" class="text-movie-link">She Hate Me (2004)</a>
+          <a href="/moviereviews/northcountry.html" class="text-movie-link">North Country (2005)</a>
+          <a href="/moviereviews/agame.html" class="text-movie-link">A Prairie Home Companion (2006)</a>
+          <a href="/moviereviews/scan.html" class="text-movie-link">The Grand (2007)</a>
+          <a href="/moviereviews/sevenpounds.html" class="text-movie-link">Seven Pounds (2008)</a>
+          <a href="/moviereviews/2012.html" class="text-movie-link">2012 (2009)</a>
+          <a href="/moviereviews/zombielanddoubletap.html" class="text-movie-link">Zombieland: Double Tap (2019)</a>
+          <a href="/moviereviews/midway.html" class="text-movie-link">Midway (2019)</a>
+          <a href="/moviereviews/kate.html" class="text-movie-link">Kate (2021)</a>
+          <a href="/moviereviews/themanfromtoronto.html" class="text-movie-link">The Man From Toronto (2022)</a>
+          <a href="/moviereviews/champions.html" class="text-movie-link">Champions (2023)</a>
+        </div>
       </div>
     </section>
   </main>
 
-     <!-- Footer -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -191,8 +229,7 @@
   </footer>
 
   <script>
-  
-        // Mobile menu functionality
+    // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
@@ -235,8 +272,6 @@
         closeMobileMenu();
       }
     });
-;
-    
   </script>
 </body>
 </html>

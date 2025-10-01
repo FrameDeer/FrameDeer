@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,8 +6,7 @@
   <title>Tom Hanks - Profile</title>
   <link rel="stylesheet" href="/ActorReviews/reviews.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation -->
@@ -40,11 +39,11 @@
     </div>
   </nav>
   
-
-  
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-
+    <button class="close-menu" id="closeMenuBtn" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
     <ul class="mobile-nav-links">
       <li><a href="/index.html">Home</a></li>
       <li><a href="/movies.html">Movies</a></li>
@@ -63,7 +62,14 @@
       <div class="actor-info">
         <h1>Tom Hanks</h1>
         <p><strong>Date of Birth:</strong> July 9, 1956</p>
+        <p><strong>Location of Birth:</strong> Concord, California, USA</p>
+        <p><strong>Height:</strong> 6'0" (183 cm)</p>
         <p class="bio">Tom Hanks is one of Hollywood's most beloved and respected actors, known for his everyman charm and remarkable versatility. A two-time Academy Award winner for Best Actor, he has starred in some of the most iconic films of the past four decades, spanning comedy, drama, and historical epics.</p>
+        
+        <div class="early-career">
+          <h3>Early Career</h3>
+          <p>Tom Hanks began his acting career in theater and television after studying theater at Chabot College and California State University. His first major role was on the ABC sitcom <em>Bosom Buddies</em> (1980-1982), where he gained recognition for his comedic timing. He transitioned to film with roles in horror movies like <em>He Knows You're Alone</em> (1980) and the Disney comedy <em>Splash</em> (1984), which became his breakthrough role. Throughout the 1980s, he established himself as a talented comedic actor in films like <em>Bachelor Party</em> (1984) and <em>Big</em> (1988), the latter earning him his first Academy Award nomination and marking his transition to more serious roles.</p>
+        </div>
       </div>
     </section>
 
@@ -85,73 +91,109 @@
 
     <!-- Filmography -->
     <section class="filmography">
-      <h2>Movies</h2>
+      <h2>Filmography</h2>
       <div class="movie-grid">
-        <a href="/MovieReviews/forrest-gump.html" class="movie-card">
-          <img src="/assets/MovieImages/ForrestGump.jpg" alt="Forrest Gump Poster">
+        <!-- Major Movies with MovieImages -->
+        <a href="/moviereviews/forrestgump.html" class="movie-card">
+          <img src="/assets/MovieImages/forrestgump.jpg" alt="Forrest Gump Poster">
           <p>Forrest Gump (1994)</p>
         </a>
-        <a href="/MovieReviews/saving-private-ryan.html" class="movie-card">
-          <img src="/assets/MovieImages/SavingPrivateRyan.jpg" alt="Saving Private Ryan Poster">
+        <a href="/moviereviews/savingprivateryan.html" class="movie-card">
+          <img src="/assets/MovieImages/savingprivateryan.jpg" alt="Saving Private Ryan Poster">
           <p>Saving Private Ryan (1998)</p>
         </a>
-        <a href="/MovieReviews/cast-away.html" class="movie-card">
-          <img src="/assets/MovieImages/CastAway.jpg" alt="Cast Away Poster">
+        <a href="/moviereviews/castaway.html" class="movie-card">
+          <img src="/assets/MovieImages/castaway.jpg" alt="Cast Away Poster">
           <p>Cast Away (2000)</p>
         </a>
-        <a href="/MovieReviews/philadelphia.html" class="movie-card">
-          <img src="/assets/MovieImages/Philadelphia.jpg" alt="Philadelphia Poster">
+        <a href="/moviereviews/philadelphia.html" class="movie-card">
+          <img src="/assets/MovieImages/philadelphia.jpg" alt="Philadelphia Poster">
           <p>Philadelphia (1993)</p>
         </a>
-        <a href="/MovieReviews/toy-story.html" class="movie-card">
-          <img src="/assets/MovieImages/ToyStory.jpg" alt="Toy Story Poster">
+        <a href="/moviereviews/toystory.html" class="movie-card">
+          <img src="/assets/MovieImages/toystory.jpg" alt="Toy Story Poster">
           <p>Toy Story Series (1995-present)</p>
         </a>
-        <a href="/MovieReviews/apollo-13.html" class="movie-card">
-          <img src="/assets/MovieImages/Apollo13.jpg" alt="Apollo 13 Poster">
+        <a href="/moviereviews/apollo13.html" class="movie-card">
+          <img src="/assets/MovieImages/apollo13.jpg" alt="Apollo 13 Poster">
           <p>Apollo 13 (1995)</p>
         </a>
-        <a href="/MovieReviews/green-mile.html" class="movie-card">
-          <img src="/assets/MovieImages/TheGreenMile.jpg" alt="The Green Mile Poster">
+        <a href="/moviereviews/thegreenmile.html" class="movie-card">
+          <img src="/assets/MovieImages/thegreenmile.jpg" alt="The Green Mile Poster">
           <p>The Green Mile (1999)</p>
         </a>
-        <a href="/MovieReviews/catch-me-if-you-can.html" class="movie-card">
-          <img src="/assets/MovieImages/CatchMeIfYouCan.jpg" alt="Catch Me If You Can Poster">
+        <a href="/moviereviews/catchmeifyoucan.html" class="movie-card">
+          <img src="/assets/MovieImages/catchmeifyoucan.jpg" alt="Catch Me If You Can Poster">
           <p>Catch Me If You Can (2002)</p>
         </a>
-        <a href="/MovieReviews/road-perdition.html" class="movie-card">
-          <img src="/assets/MovieImages/RoadToPerdition.jpg" alt="Road to Perdition Poster">
+        <a href="/moviereviews/roadtoperdition.html" class="movie-card">
+          <img src="/assets/MovieImages/roadtoperdition.jpg" alt="Road to Perdition Poster">
           <p>Road to Perdition (2002)</p>
         </a>
-        <a href="/MovieReviews/big.html" class="movie-card">
-          <img src="/assets/MovieImages/Big.jpg" alt="Big Poster">
+        <a href="/moviereviews/big.html" class="movie-card">
+          <img src="/assets/MovieImages/big.jpg" alt="Big Poster">
           <p>Big (1988)</p>
         </a>
-        <a href="/MovieReviews/sleepless-seattle.html" class="movie-card">
-          <img src="/assets/MovieImages/SleeplessInSeattle.jpg" alt="Sleepless in Seattle Poster">
+        <a href="/moviereviews/sleeplessinseattle.html" class="movie-card">
+          <img src="/assets/MovieImages/sleeplessinseattle.jpg" alt="Sleepless in Seattle Poster">
           <p>Sleepless in Seattle (1993)</p>
         </a>
-        <a href="/MovieReviews/terminal.html" class="movie-card">
-          <img src="/assets/MovieImages/TheTerminal.jpg" alt="The Terminal Poster">
+        <a href="/moviereviews/theterminal.html" class="movie-card">
+          <img src="/assets/MovieImages/theterminal.jpg" alt="The Terminal Poster">
           <p>The Terminal (2004)</p>
         </a>
-        <a href="/MovieReviews/da-vinci-code.html" class="movie-card">
-          <img src="/assets/MovieImages/TheDaVinciCode.jpg" alt="The Da Vinci Code Poster">
+        <a href="/moviereviews/thedavincicode.html" class="movie-card">
+          <img src="/assets/MovieImages/thedavincicode.jpg" alt="The Da Vinci Code Poster">
           <p>The Da Vinci Code (2006)</p>
         </a>
-        <a href="/MovieReviews/captain-phillips.html" class="movie-card">
-          <img src="/assets/MovieImages/CaptainPhillips.jpg" alt="Captain Phillips Poster">
+        <a href="/moviereviews/captainphillips.html" class="movie-card">
+          <img src="/assets/MovieImages/captainphillips.jpg" alt="Captain Phillips Poster">
           <p>Captain Phillips (2013)</p>
         </a>
-        <a href="/MovieReviews/sully.html" class="movie-card">
-          <img src="/assets/MovieImages/Sully.jpg" alt="Sully Poster">
+        <a href="/moviereviews/sully.html" class="movie-card">
+          <img src="/assets/MovieImages/sully.jpg" alt="Sully Poster">
           <p>Sully (2016)</p>
         </a>
+      </div>
+      
+      <!-- Non-major movies without images -->
+      <div class="text-movie-list">
+        <h3>Other Notable Films</h3>
+        <div class="text-movie-grid">
+          <a href="/moviereviews/heknowsyourealone.html" class="text-movie-link">He Knows You're Alone (1980)</a>
+          <a href="/moviereviews/splash.html" class="text-movie-link">Splash (1984)</a>
+          <a href="/moviereviews/bachelorparty.html" class="text-movie-link">Bachelor Party (1984)</a>
+          <a href="/moviereviews/thedragonslayer.html" class="text-movie-link">The Man with One Red Shoe (1985)</a>
+          <a href="/moviereviews/volunteers.html" class="text-movie-link">Volunteers (1985)</a>
+          <a href="/moviereviews/therealstory.html" class="text-movie-link">The Money Pit (1986)</a>
+          <a href="/moviereviews/nothingincommon.html" class="text-movie-link">Nothing in Common (1986)</a>
+          <a href="/moviereviews/dragnet.html" class="text-movie-link">Dragnet (1987)</a>
+          <a href="/moviereviews/punchline.html" class="text-movie-link">Punchline (1988)</a>
+          <a href="/moviereviews/turnerandhooch.html" class="text-movie-link">Turner & Hooch (1989)</a>
+          <a href="/moviereviews/joevsthevolcano.html" class="text-movie-link">Joe Versus the Volcano (1990)</a>
+          <a href="/moviereviews/bonfireofthevanities.html" class="text-movie-link">The Bonfire of the Vanities (1990)</a>
+          <a href="/moviereviews/aradfordaffair.html" class="text-movie-link">A League of Their Own (1992)</a>
+          <a href="/moviereviews/afewgoodmen.html" class="text-movie-link">A Few Good Men (1992)</a>
+          <a href="/moviereviews/philadelphia.html" class="text-movie-link">Philadelphia (1993)</a>
+          <a href="/moviereviews/thatthingyoudo.html" class="text-movie-link">That Thing You Do! (1996)</a>
+          <a href="/moviereviews/yougotmail.html" class="text-movie-link">You've Got Mail (1998)</a>
+          <a href="/moviereviews/thepolarexpress.html" class="text-movie-link">The Polar Express (2004)</a>
+          <a href="/moviereviews/theladyskillers.html" class="text-movie-link">The Ladykillers (2004)</a>
+          <a href="/moviereviews/cloudatlas.html" class="text-movie-link">Cloud Atlas (2012)</a>
+          <a href="/moviereviews/bridgeofspies.html" class="text-movie-link">Bridge of Spies (2015)</a>
+          <a href="/moviereviews/inferno.html" class="text-movie-link">Inferno (2016)</a>
+          <a href="/moviereviews/thepost.html" class="text-movie-link">The Post (2017)</a>
+          <a href="/moviereviews/abeautifulday.html" class="text-movie-link">A Beautiful Day in the Neighborhood (2019)</a>
+          <a href="/moviereviews/greyhound.html" class="text-movie-link">Greyhound (2020)</a>
+          <a href="/moviereviews/newsoftheworld.html" class="text-movie-link">News of the World (2020)</a>
+          <a href="/moviereviews/elvis.html" class="text-movie-link">Elvis (2022)</a>
+          <a href="/moviereviews/asteroidcity.html" class="text-movie-link">Asteroid City (2023)</a>
+        </div>
       </div>
     </section>
   </main>
 
-     <!-- Footer -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -193,8 +235,7 @@
   </footer>
 
   <script>
-  
-        // Mobile menu functionality
+    // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
@@ -237,8 +278,6 @@
         closeMobileMenu();
       }
     });
-;
-    
   </script>
 </body>
 </html>

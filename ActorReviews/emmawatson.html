@@ -6,8 +6,7 @@
   <title>Emma Watson - Profile</title>
   <link rel="stylesheet" href="/ActorReviews/reviews.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -41,11 +40,11 @@
     </div>
   </nav>
   
-
-  
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-
+    <button class="close-menu" id="closeMenuBtn" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
     <ul class="mobile-nav-links">
       <li><a href="/index.html">Home</a></li>
       <li><a href="/movies.html">Movies</a></li>
@@ -64,7 +63,14 @@
       <div class="actor-info">
         <h1>Emma Watson</h1>
         <p><strong>Date of Birth:</strong> April 15, 1990</p>
+        <p><strong>Location of Birth:</strong> Paris, France</p>
+        <p><strong>Height:</strong> 5'5" (165 cm)</p>
         <p class="bio">Emma Watson is a British actress and activist best known for her role as Hermione Granger in the Harry Potter film series. Beyond her iconic franchise work, she has established herself as a talented performer in various genres while also becoming a prominent advocate for gender equality and education.</p>
+        
+        <div class="early-career">
+          <h3>Early Career</h3>
+          <p>Emma Watson began her acting career at age nine when she was cast as Hermione Granger in the Harry Potter film series, a role she would play for ten years across eight films. Before being cast, she had only performed in school plays. The first Harry Potter film, <em>Harry Potter and the Philosopher's Stone</em> (2001), launched her to international fame at just eleven years old. She balanced her education with filming throughout her childhood and teenage years, attending school on set and eventually graduating from Brown University with a degree in English literature.</p>
+        </div>
       </div>
     </section>
 
@@ -83,53 +89,71 @@
 
     <!-- Filmography -->
     <section class="filmography">
-      <h2>Movies</h2>
+      <h2>Filmography</h2>
       <div class="movie-grid">
-        <a href="/MovieReviews/harry-potter1.html" class="movie-card">
-          <img src="/assets/MovieImages/HarryPotter1.jpg" alt="Harry Potter and the Philosopher's Stone Poster">
+        <!-- Major Movies with MovieImages -->
+        <a href="/moviereviews/harrypotterandthephilosophersstone.html" class="movie-card">
+          <img src="/assets/MovieImages/harrypotterandthephilosophersstone.jpg" alt="Harry Potter and the Philosopher's Stone Poster">
           <p>Harry Potter and the Philosopher's Stone (2001)</p>
         </a>
-        <a href="/MovieReviews/harry-potter8.html" class="movie-card">
-          <img src="/assets/MovieImages/HarryPotter8.jpg" alt="Harry Potter and the Deathly Hallows Part 2 Poster">
+        <a href="/moviereviews/harrypotterandthedeathlyhallowspart2.html" class="movie-card">
+          <img src="/assets/MovieImages/harrypotterandthedeathlyhallowspart2.jpg" alt="Harry Potter and the Deathly Hallows Part 2 Poster">
           <p>Harry Potter and the Deathly Hallows Part 2 (2011)</p>
         </a>
-        <a href="/MovieReviews/beauty-beast.html" class="movie-card">
-          <img src="/assets/MovieImages/BeautyAndTheBeast.jpg" alt="Beauty and the Beast Poster">
+        <a href="/moviereviews/beautyandthebeast.html" class="movie-card">
+          <img src="/assets/MovieImages/beautyandthebeast.jpg" alt="Beauty and the Beast Poster">
           <p>Beauty and the Beast (2017)</p>
         </a>
-        <a href="/MovieReviews/perks-wallflower.html" class="movie-card">
-          <img src="/assets/MovieImages/PerksOfBeingAWallflower.jpg" alt="The Perks of Being a Wallflower Poster">
+        <a href="/moviereviews/theperksofbeingawallflower.html" class="movie-card">
+          <img src="/assets/MovieImages/theperksofbeingawallflower.jpg" alt="The Perks of Being a Wallflower Poster">
           <p>The Perks of Being a Wallflower (2012)</p>
         </a>
-        <a href="/MovieReviews/bling-ring.html" class="movie-card">
-          <img src="/assets/MovieImages/TheBlingRing.jpg" alt="The Bling Ring Poster">
+        <a href="/moviereviews/theblingring.html" class="movie-card">
+          <img src="/assets/MovieImages/theblingring.jpg" alt="The Bling Ring Poster">
           <p>The Bling Ring (2013)</p>
         </a>
-        <a href="/MovieReviews/noah.html" class="movie-card">
-          <img src="/assets/MovieImages/Noah.jpg" alt="Noah Poster">
+        <a href="/moviereviews/noah.html" class="movie-card">
+          <img src="/assets/MovieImages/noah.jpg" alt="Noah Poster">
           <p>Noah (2014)</p>
         </a>
-        <a href="/MovieReviews/regression.html" class="movie-card">
-          <img src="/assets/MovieImages/Regression.jpg" alt="Regression Poster">
+        <a href="/moviereviews/regression.html" class="movie-card">
+          <img src="/assets/MovieImages/regression.jpg" alt="Regression Poster">
           <p>Regression (2015)</p>
         </a>
-        <a href="/MovieReviews/colonia.html" class="movie-card">
-          <img src="/assets/MovieImages/Colonia.jpg" alt="Colonia Poster">
+        <a href="/moviereviews/colonia.html" class="movie-card">
+          <img src="/assets/MovieImages/colonia.jpg" alt="Colonia Poster">
           <p>Colonia (2015)</p>
         </a>
-        <a href="/MovieReviews/circle.html" class="movie-card">
-          <img src="/assets/MovieImages/TheCircle.jpg" alt="The Circle Poster">
+        <a href="/moviereviews/thecircle.html" class="movie-card">
+          <img src="/assets/MovieImages/thecircle.jpg" alt="The Circle Poster">
           <p>The Circle (2017)</p>
         </a>
-        <a href="/MovieReviews/little-women.html" class="movie-card">
-          <img src="/assets/MovieImages/LittleWomen.jpg" alt="Little Women Poster">
+        <a href="/moviereviews/littlewomen.html" class="movie-card">
+          <img src="/assets/MovieImages/littlewomen.jpg" alt="Little Women Poster">
           <p>Little Women (2019)</p>
         </a>
+      </div>
+      
+      <!-- Non-major movies without images -->
+      <div class="text-movie-list">
+        <h3>Other Notable Films</h3>
+        <div class="text-movie-grid">
+          <a href="/moviereviews/harrypotterandthechamberofsecrets.html" class="text-movie-link">Harry Potter and the Chamber of Secrets (2002)</a>
+          <a href="/moviereviews/harrypotterandtheprisonerofazkaban.html" class="text-movie-link">Harry Potter and the Prisoner of Azkaban (2004)</a>
+          <a href="/moviereviews/harrypotterandthegobletoffire.html" class="text-movie-link">Harry Potter and the Goblet of Fire (2005)</a>
+          <a href="/moviereviews/harrypotterandtheorderofthephoenix.html" class="text-movie-link">Harry Potter and the Order of the Phoenix (2007)</a>
+          <a href="/moviereviews/harrypotterandthehalfbloodprince.html" class="text-movie-link">Harry Potter and the Half-Blood Prince (2009)</a>
+          <a href="/moviereviews/harrypotterandthedeathlyhallowspart1.html" class="text-movie-link">Harry Potter and the Deathly Hallows Part 1 (2010)</a>
+          <a href="/moviereviews/balletshoes.html" class="text-movie-link">Ballet Shoes (2007)</a>
+          <a href="/moviereviews/taleofdespereaux.html" class="text-movie-link">The Tale of Despereaux (2008)</a>
+          <a href="/moviereviews/myweekwithmarilyn.html" class="text-movie-link">My Week with Marilyn (2011)</a>
+          <a href="/moviereviews/thisistheend.html" class="text-movie-link">This Is the End (2013)</a>
+        </div>
       </div>
     </section>
   </main>
 
-              <!-- Footer -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -171,8 +195,7 @@
   </footer>
 
   <script>
-  
-        // Mobile menu functionality
+    // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
@@ -215,8 +238,6 @@
         closeMobileMenu();
       }
     });
-;
-    
   </script>
 </body>
 </html>

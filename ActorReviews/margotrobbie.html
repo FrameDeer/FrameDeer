@@ -6,7 +6,7 @@
   <title>Margot Robbie - Profile</title>
   <link rel="stylesheet" href="/ActorReviews/reviews.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -40,11 +40,11 @@
     </div>
   </nav>
   
-
-  
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-
+    <button class="close-menu" id="closeMenuBtn" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
     <ul class="mobile-nav-links">
       <li><a href="/index.html">Home</a></li>
       <li><a href="/movies.html">Movies</a></li>
@@ -63,8 +63,15 @@
       <div class="actor-info">
         <h1>Margot Robbie</h1>
         <p><strong>Date of Birth:</strong> July 2, 1990</p>
+        <p><strong>Location of Birth:</strong> Dalby, Queensland, Australia</p>
+        <p><strong>Height:</strong> 5'6" (168 cm)</p>
         <p><strong>Nationality:</strong> Australian</p>
         <p class="bio">Margot Robbie is an Academy Award-nominated actress and producer known for her versatility and captivating screen presence. Rising to international fame with her role in <em>The Wolf of Wall Street</em>, she has since established herself as one of Hollywood's most talented and bankable stars, particularly acclaimed for her portrayal of Harley Quinn in the DC Extended Universe.</p>
+        
+        <div class="early-career">
+          <h3>Early Career</h3>
+          <p>Margot Robbie began her acting career in Australian independent films and television series. She gained recognition in Australia for her role as Donna Freedman on the long-running soap opera <em>Neighbours</em> from 2008 to 2011. Seeking to expand her career internationally, she moved to the United States in 2011. Her breakthrough came in 2013 when she was cast opposite Leonardo DiCaprio in Martin Scorsese's <em>The Wolf of Wall Street</em>, which launched her to international stardom and established her as a serious Hollywood actress.</p>
+        </div>
       </div>
     </section>
 
@@ -84,61 +91,79 @@
 
     <!-- Filmography -->
     <section class="filmography">
-      <h2>Notable Movies</h2>
+      <h2>Filmography</h2>
       <div class="movie-grid">
-        <a href="/MovieReviews/barbie.html" class="movie-card">
-          <img src="/assets/MovieImages/Barbie.jpg" alt="Barbie Poster">
+        <!-- Major Movies with MovieImages -->
+        <a href="/moviereviews/barbie.html" class="movie-card">
+          <img src="/assets/MovieImages/barbie.jpg" alt="Barbie Poster">
           <p>Barbie (2023)</p>
         </a>
-        <a href="/MovieReviews/wolfowallstreet.html" class="movie-card">
-          <img src="/assets/MovieImages/WolfofWallStreet.jpg" alt="Wolf of Wall Street Poster">
+        <a href="/moviereviews/thewolfofwallstreet.html" class="movie-card">
+          <img src="/assets/MovieImages/thewolfofwallstreet.jpg" alt="Wolf of Wall Street Poster">
           <p>The Wolf of Wall Street (2013)</p>
         </a>
-        <a href="/MovieReviews/itonya.html" class="movie-card">
-          <img src="/assets/MovieImages/ITonya.jpg" alt="I, Tonya Poster">
+        <a href="/moviereviews/itonya.html" class="movie-card">
+          <img src="/assets/MovieImages/itonya.jpg" alt="I, Tonya Poster">
           <p>I, Tonya (2017)</p>
         </a>
-        <a href="/MovieReviews/suicidesquad.html" class="movie-card">
-          <img src="/assets/MovieImages/SuicideSquad.jpg" alt="Suicide Squad Poster">
+        <a href="/moviereviews/suicidesquad.html" class="movie-card">
+          <img src="/assets/MovieImages/suicidesquad.jpg" alt="Suicide Squad Poster">
           <p>Suicide Squad (2016)</p>
         </a>
-        <a href="/MovieReviews/birdsofprey.html" class="movie-card">
-          <img src="/assets/MovieImages/BirdsOfPrey.jpg" alt="Birds of Prey Poster">
+        <a href="/moviereviews/birdsofprey.html" class="movie-card">
+          <img src="/assets/MovieImages/birdsofprey.jpg" alt="Birds of Prey Poster">
           <p>Birds of Prey (2020)</p>
         </a>
-        <a href="/MovieReviews/onceuponatime.html" class="movie-card">
-          <img src="/assets/MovieImages/OnceUponATime.jpg" alt="Once Upon a Time in Hollywood Poster">
-          <p>Once Upon a Time... (2019)</p>
+        <a href="/moviereviews/onceuponatimeinhollywood.html" class="movie-card">
+          <img src="/assets/MovieImages/onceuponatimeinhollywood.jpg" alt="Once Upon a Time in Hollywood Poster">
+          <p>Once Upon a Time in Hollywood (2019)</p>
         </a>
-        <a href="/MovieReviews/bombshell.html" class="movie-card">
-          <img src="/assets/MovieImages/Bombshell.jpg" alt="Bombshell Poster">
+        <a href="/moviereviews/bombshell.html" class="movie-card">
+          <img src="/assets/MovieImages/bombshell.jpg" alt="Bombshell Poster">
           <p>Bombshell (2019)</p>
         </a>
-        <a href="/MovieReviews/focus.html" class="movie-card">
-          <img src="/assets/MovieImages/Focus.jpg" alt="Focus Poster">
+        <a href="/moviereviews/focus.html" class="movie-card">
+          <img src="/assets/MovieImages/focus.jpg" alt="Focus Poster">
           <p>Focus (2015)</p>
         </a>
-        <a href="/MovieReviews/whitneyhouston.html" class="movie-card">
-          <img src="/assets/MovieImages/WhitneyHouston.jpg" alt="I Am Not a Poster">
-          <p>I Am Not a... (2022)</p>
+        <a href="/moviereviews/iamnotaserialkiller.html" class="movie-card">
+          <img src="/assets/MovieImages/iamnotaserialkiller.jpg" alt="I Am Not a Serial Killer Poster">
+          <p>I Am Not a Serial Killer (2022)</p>
         </a>
-        <a href="/MovieReviews/thesuicidesquad.html" class="movie-card">
-          <img src="/assets/MovieImages/TheSuicideSquad.jpg" alt="The Suicide Squad Poster">
+        <a href="/moviereviews/thesuicidesquad.html" class="movie-card">
+          <img src="/assets/MovieImages/thesuicidesquad.jpg" alt="The Suicide Squad Poster">
           <p>The Suicide Squad (2021)</p>
         </a>
-        <a href="/MovieReviews/maryqueenofscots.html" class="movie-card">
-          <img src="/assets/MovieImages/MaryQueenOfScots.jpg" alt="Mary Queen of Scots Poster">
+        <a href="/moviereviews/maryqueenofscots.html" class="movie-card">
+          <img src="/assets/MovieImages/maryqueenofscots.jpg" alt="Mary Queen of Scots Poster">
           <p>Mary Queen of Scots (2018)</p>
         </a>
-        <a href="/MovieReviews/terminal.html" class="movie-card">
-          <img src="/assets/MovieImages/Terminal.jpg" alt="Terminal Poster">
+        <a href="/moviereviews/terminal.html" class="movie-card">
+          <img src="/assets/MovieImages/terminal.jpg" alt="Terminal Poster">
           <p>Terminal (2018)</p>
         </a>
+      </div>
+      
+      <!-- Non-major movies without images -->
+      <div class="text-movie-list">
+        <h3>Other Notable Films</h3>
+        <div class="text-movie-grid">
+          <a href="/moviereviews/abouttime.html" class="text-movie-link">About Time (2013)</a>
+          <a href="/moviereviews/thelegendofTarzan.html" class="text-movie-link">The Legend of Tarzan (2016)</a>
+          <a href="/moviereviews/zforzachariah.html" class="text-movie-link">Z for Zachariah (2015)</a>
+          <a href="/moviereviews/goodbyechristopherrobin.html" class="text-movie-link">Goodbye Christopher Robin (2017)</a>
+          <a href="/moviereviews/dreamland.html" class="text-movie-link">Dreamland (2019)</a>
+          <a href="/moviereviews/peterrabbit.html" class="text-movie-link">Peter Rabbit (2018)</a>
+          <a href="/moviereviews/peterrabbit2.html" class="text-movie-link">Peter Rabbit 2: The Runaway (2021)</a>
+          <a href="/moviereviews/amsterdam.html" class="text-movie-link">Amsterdam (2022)</a>
+          <a href="/moviereviews/babylon.html" class="text-movie-link">Babylon (2022)</a>
+          <a href="/moviereviews/suitefrancaise.html" class="text-movie-link">Suite Française (2015)</a>
+        </div>
       </div>
     </section>
   </main>
 
-             <!-- Footer -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -180,8 +205,7 @@
   </footer>
 
   <script>
-  
-        // Mobile menu functionality
+    // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
@@ -224,8 +248,6 @@
         closeMobileMenu();
       }
     });
-;
-    
   </script>
 </body>
 </html>

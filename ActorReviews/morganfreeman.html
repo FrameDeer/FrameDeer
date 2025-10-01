@@ -6,8 +6,7 @@
   <title>Morgan Freeman - Profile</title>
   <link rel="stylesheet" href="/ActorReviews/reviews.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -41,11 +40,11 @@
     </div>
   </nav>
   
-
-  
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-
+    <button class="close-menu" id="closeMenuBtn" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
     <ul class="mobile-nav-links">
       <li><a href="/index.html">Home</a></li>
       <li><a href="/movies.html">Movies</a></li>
@@ -64,7 +63,14 @@
       <div class="actor-info">
         <h1>Morgan Freeman</h1>
         <p><strong>Date of Birth:</strong> June 1, 1937</p>
+        <p><strong>Location of Birth:</strong> Memphis, Tennessee, USA</p>
+        <p><strong>Height:</strong> 6'2" (188 cm)</p>
         <p class="bio">Morgan Freeman is an Academy Award-winning actor and narrator known for his distinctive voice and authoritative presence. With a career spanning over five decades, he has become one of Hollywood's most respected and recognizable figures, appearing in numerous critically acclaimed and commercially successful films.</p>
+        
+        <div class="early-career">
+          <h3>Early Career</h3>
+          <p>Morgan Freeman began his acting career in theater, making his Broadway debut in 1967's <em>Hello, Dolly!</em> He gained early recognition as a member of the PBS children's television series <em>The Electric Company</em> (1971-1977), where he developed his distinctive vocal delivery. His film career started with small roles in the 1970s and 1980s, but his breakthrough came in 1987 with his Oscar-nominated performance in <em>Street Smart</em>. This led to his iconic role as Hoke Colburn in <em>Driving Miss Daisy</em> (1989), which earned him international acclaim and established him as a leading dramatic actor in Hollywood.</p>
+        </div>
       </div>
     </section>
 
@@ -87,73 +93,101 @@
 
     <!-- Filmography -->
     <section class="filmography">
-      <h2>Movies</h2>
+      <h2>Filmography</h2>
       <div class="movie-grid">
-        <a href="/MovieReviews/shawshank-redemption.html" class="movie-card">
-          <img src="/assets/MovieImages/ShawshankRedemption.jpg" alt="The Shawshank Redemption Poster">
+        <!-- Major Movies with MovieImages -->
+        <a href="/moviereviews/theshawshankredemption.html" class="movie-card">
+          <img src="/assets/MovieImages/theshawshankredemption.jpg" alt="The Shawshank Redemption Poster">
           <p>The Shawshank Redemption (1994)</p>
         </a>
-        <a href="/MovieReviews/million-dollar-baby.html" class="movie-card">
-          <img src="/assets/MovieImages/MillionDollarBaby.jpg" alt="Million Dollar Baby Poster">
+        <a href="/moviereviews/milliondollarbaby.html" class="movie-card">
+          <img src="/assets/MovieImages/milliondollarbaby.jpg" alt="Million Dollar Baby Poster">
           <p>Million Dollar Baby (2004)</p>
         </a>
-        <a href="/MovieReviews/driving-miss-daisy.html" class="movie-card">
-          <img src="/assets/MovieImages/DrivingMissDaisy.jpg" alt="Driving Miss Daisy Poster">
+        <a href="/moviereviews/drivingmissdaisy.html" class="movie-card">
+          <img src="/assets/MovieImages/drivingmissdaisy.jpg" alt="Driving Miss Daisy Poster">
           <p>Driving Miss Daisy (1989)</p>
         </a>
-        <a href="/MovieReviews/se7en.html" class="movie-card">
-          <img src="/assets/MovieImages/Se7en.jpg" alt="Se7en Poster">
+        <a href="/moviereviews/se7en.html" class="movie-card">
+          <img src="/assets/MovieImages/se7en.jpg" alt="Se7en Poster">
           <p>Se7en (1995)</p>
         </a>
-        <a href="/MovieReviews/bruce-almighty.html" class="movie-card">
-          <img src="/assets/MovieImages/BruceAlmighty.jpg" alt="Bruce Almighty Poster">
+        <a href="/moviereviews/brucealmighty.html" class="movie-card">
+          <img src="/assets/MovieImages/brucealmighty.jpg" alt="Bruce Almighty Poster">
           <p>Bruce Almighty (2003)</p>
         </a>
-        <a href="/MovieReviews/unforgiven.html" class="movie-card">
-          <img src="/assets/MovieImages/Unforgiven.jpg" alt="Unforgiven Poster">
+        <a href="/moviereviews/unforgiven.html" class="movie-card">
+          <img src="/assets/MovieImages/unforgiven.jpg" alt="Unforgiven Poster">
           <p>Unforgiven (1992)</p>
         </a>
-        <a href="/MovieReviews/lean-on-me.html" class="movie-card">
-          <img src="/assets/MovieImages/LeanOnMe.jpg" alt="Lean on Me Poster">
+        <a href="/moviereviews/leanonme.html" class="movie-card">
+          <img src="/assets/MovieImages/leanonme.jpg" alt="Lean on Me Poster">
           <p>Lean on Me (1989)</p>
         </a>
-        <a href="/MovieReviews/glory.html" class="movie-card">
-          <img src="/assets/MovieImages/Glory.jpg" alt="Glory Poster">
+        <a href="/moviereviews/glory.html" class="movie-card">
+          <img src="/assets/MovieImages/glory.jpg" alt="Glory Poster">
           <p>Glory (1989)</p>
         </a>
-        <a href="/MovieReviews/robin-hood.html" class="movie-card">
-          <img src="/assets/MovieImages/RobinHood.jpg" alt="Robin Hood: Prince of Thieves Poster">
+        <a href="/moviereviews/robinhood.html" class="movie-card">
+          <img src="/assets/MovieImages/robinhood.jpg" alt="Robin Hood: Prince of Thieves Poster">
           <p>Robin Hood: Prince of Thieves (1991)</p>
         </a>
-        <a href="/MovieReviews/now-you-see-me.html" class="movie-card">
-          <img src="/assets/MovieImages/NowYouSeeMe.jpg" alt="Now You See Me Poster">
+        <a href="/moviereviews/nowyouseeme.html" class="movie-card">
+          <img src="/assets/MovieImages/nowyouseeme.jpg" alt="Now You See Me Poster">
           <p>Now You See Me (2013)</p>
         </a>
-        <a href="/MovieReviews/wanted.html" class="movie-card">
-          <img src="/assets/MovieImages/Wanted.jpg" alt="Wanted Poster">
+        <a href="/moviereviews/wanted.html" class="movie-card">
+          <img src="/assets/MovieImages/wanted.jpg" alt="Wanted Poster">
           <p>Wanted (2008)</p>
         </a>
-        <a href="/MovieReviews/dark-knight.html" class="movie-card">
-          <img src="/assets/MovieImages/DarkKnight.jpg" alt="The Dark Knight Poster">
+        <a href="/moviereviews/thedarkknight.html" class="movie-card">
+          <img src="/assets/MovieImages/thedarkknight.jpg" alt="The Dark Knight Poster">
           <p>The Dark Knight Trilogy (2005-2012)</p>
         </a>
-        <a href="/MovieReviews/invictus.html" class="movie-card">
-          <img src="/assets/MovieImages/Invictus.jpg" alt="Invictus Poster">
+        <a href="/moviereviews/invictus.html" class="movie-card">
+          <img src="/assets/MovieImages/invictus.jpg" alt="Invictus Poster">
           <p>Invictus (2009)</p>
         </a>
-        <a href="/MovieReviews/lucy.html" class="movie-card">
-          <img src="/assets/MovieImages/Lucy.jpg" alt="Lucy Poster">
+        <a href="/moviereviews/lucy.html" class="movie-card">
+          <img src="/assets/MovieImages/lucy.jpg" alt="Lucy Poster">
           <p>Lucy (2014)</p>
         </a>
-        <a href="/MovieReviews/going-style.html" class="movie-card">
-          <img src="/assets/MovieImages/GoingInStyle.jpg" alt="Going in Style Poster">
+        <a href="/moviereviews/goinginstyle.html" class="movie-card">
+          <img src="/assets/MovieImages/goinginstyle.jpg" alt="Going in Style Poster">
           <p>Going in Style (2017)</p>
         </a>
+      </div>
+      
+      <!-- Non-major movies without images -->
+      <div class="text-movie-list">
+        <h3>Other Notable Films</h3>
+        <div class="text-movie-grid">
+          <a href="/moviereviews/streetsmart.html" class="text-movie-link">Street Smart (1987)</a>
+          <a href="/moviereviews/cleanandsober.html" class="text-movie-link">Clean and Sober (1988)</a>
+          <a href="/moviereviews/outbreak.html" class="text-movie-link">Outbreak (1995)</a>
+          <a href="/moviereviews/chainreaction.html" class="text-movie-link">Chain Reaction (1996)</a>
+          <a href="/moviereviews/amistad.html" class="text-movie-link">Amistad (1997)</a>
+          <a href="/moviereviews/deepimpact.html" class="text-movie-link">Deep Impact (1998)</a>
+          <a href="/moviereviews/nursebetty.html" class="text-movie-link">Nurse Betty (2000)</a>
+          <a href="/moviereviews/alongcameaspider.html" class="text-movie-link">Along Came a Spider (2001)</a>
+          <a href="/moviereviews/highcrimes.html" class="text-movie-link">High Crimes (2002)</a>
+          <a href="/moviereviews/leviathan.html" class="text-movie-link">The Bucket List (2007)</a>
+          <a href="/moviereviews/red.html" class="text-movie-link">Red (2010)</a>
+          <a href="/moviereviews/dolphintale.html" class="text-movie-link">Dolphin Tale (2011)</a>
+          <a href="/moviereviews/olympushasfallen.html" class="text-movie-link">Olympus Has Fallen (2013)</a>
+          <a href="/moviereviews/lastknight.html" class="text-movie-link">Last Knights (2015)</a>
+          <a href="/moviereviews/londonhasfallen.html" class="text-movie-link">London Has Fallen (2016)</a>
+          <a href="/moviereviews/justgettingstarted.html" class="text-movie-link">Just Getting Started (2017)</a>
+          <a href="/moviereviews/angelhasfallen.html" class="text-movie-link">Angel Has Fallen (2019)</a>
+          <a href="/moviereviews/thecomebacktrail.html" class="text-movie-link">The Comeback Trail (2020)</a>
+          <a href="/moviereviews/hitmanswifesbodyguard.html" class="text-movie-link">The Hitman's Wife's Bodyguard (2021)</a>
+          <a href="/moviereviews/aparalleluniverse.html" class="text-movie-link">A Mouthful of Air (2021)</a>
+        </div>
       </div>
     </section>
   </main>
 
-   <!-- Footer -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -195,8 +229,7 @@
   </footer>
 
   <script>
-  
-        // Mobile menu functionality
+    // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
@@ -239,8 +272,6 @@
         closeMobileMenu();
       }
     });
-;
-    
   </script>
 </body>
 </html>

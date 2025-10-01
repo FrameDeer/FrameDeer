@@ -6,8 +6,7 @@
   <title>Leonardo DiCaprio - Profile</title>
   <link rel="stylesheet" href="/ActorReviews/reviews.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -41,10 +40,11 @@
     </div>
   </nav>
   
-  
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-
+    <button class="close-menu" id="closeMenuBtn" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
     <ul class="mobile-nav-links">
       <li><a href="/index.html">Home</a></li>
       <li><a href="/movies.html">Movies</a></li>
@@ -63,7 +63,14 @@
       <div class="actor-info">
         <h1>Leonardo DiCaprio</h1>
         <p><strong>Date of Birth:</strong> November 11, 1974</p>
+        <p><strong>Location of Birth:</strong> Los Angeles, California, USA</p>
+        <p><strong>Height:</strong> 6'0" (183 cm)</p>
         <p class="bio">Leonardo DiCaprio is an Academy Award-winning actor known for his intense roles in films ranging from blockbusters to character-driven dramas. With a career spanning over three decades, he has established himself as one of Hollywood's most versatile and dedicated performers.</p>
+        
+        <div class="early-career">
+          <h3>Early Career</h3>
+          <p>DiCaprio began his career in the late 1980s with appearances in television commercials and educational films. His breakthrough came in the early 1990s with a recurring role on the sitcom <em>Growing Pains</em> and his acclaimed performance as a homeless boy in <em>This Boy's Life</em> (1993). His career skyrocketed after his Oscar-nominated role as Arnie Grape in <em>What's Eating Gilbert Grape</em> (1993), establishing him as one of Hollywood's most promising young actors.</p>
+        </div>
       </div>
     </section>
 
@@ -81,45 +88,80 @@
 
     <!-- Filmography -->
     <section class="filmography">
-      <h2>Movies</h2>
+      <h2>Filmography</h2>
       <div class="movie-grid">
-        <a href="/MovieReviews/inception.html" class="movie-card">
-          <img src="/assets/MovieImages/Inception.jpg" alt="Inception Poster">
+        <!-- Major Movies with MovieImages -->
+        <a href="/moviereviews/inception.html" class="movie-card">
+          <img src="/assets/MovieImages/inception.jpg" alt="Inception Poster">
           <p>Inception (2010)</p>
         </a>
-        <a href="/MovieReviews/revenant.html" class="movie-card">
-          <img src="/assets/MovieImages/Therevenant.jpg" alt="The Revenant Poster">
+        <a href="/moviereviews/therevenant.html" class="movie-card">
+          <img src="/assets/MovieImages/therevenant.jpg" alt="The Revenant Poster">
           <p>The Revenant (2015)</p>
         </a>
-        <a href="/MovieReviews/wolf-wallstreet.html" class="movie-card">
-          <img src="/assets/MovieImages/WolfofWallStreet.jpg" alt="Wolf of Wall Street Poster">
+        <a href="/moviereviews/thewolfofwallstreet.html" class="movie-card">
+          <img src="/assets/MovieImages/wolfofwallstreet.jpg" alt="Wolf of Wall Street Poster">
           <p>The Wolf of Wall Street (2013)</p>
         </a>
-        <a href="/MovieReviews/titanic.html" class="movie-card">
-          <img src="/assets/MovieImages/Titanic.jpeg" alt="Titanic Poster">
+        <a href="/moviereviews/titanic.html" class="movie-card">
+          <img src="/assets/MovieImages/titanic.jpeg" alt="Titanic Poster">
           <p>Titanic (1997)</p>
         </a>
-        <a href="/MovieReviews/shutter-island.html" class="movie-card">
-          <img src="/assets/MovieImages/Shutterisland.jpeg" alt="Shutter Island Poster">
+        <a href="/moviereviews/shutterisland.html" class="movie-card">
+          <img src="/assets/MovieImages/shutterisland.jpeg" alt="Shutter Island Poster">
           <p>Shutter Island (2010)</p>
         </a>
-        <a href="/MovieReviews/departed.html" class="movie-card">
-          <img src="/assets/MovieImages/Departed.jpg" alt="The Departed Poster">
+        <a href="/moviereviews/thedeparted.html" class="movie-card">
+          <img src="/assets/MovieImages/thedeparted.jpg" alt="The Departed Poster">
           <p>The Departed (2006)</p>
         </a>
-        <a href="/MovieReviews/gatsby.html" class="movie-card">
-          <img src="/assets/MovieImages/GreatGatsby.jpg" alt="The Great Gatsby Poster">
+        <a href="/moviereviews/thegreatgatsby.html" class="movie-card">
+          <img src="/assets/MovieImages/thegreatgatsby.jpg" alt="The Great Gatsby Poster">
           <p>The Great Gatsby (2013)</p>
         </a>
-        <a href="/MovieReviews/django.html" class="movie-card">
-          <img src="/assets/MovieImages/Django.jpg" alt="Django Unchained Poster">
+        <a href="/moviereviews/djangounchained.html" class="movie-card">
+          <img src="/assets/MovieImages/djangounchained.jpg" alt="Django Unchained Poster">
           <p>Django Unchained (2012)</p>
+        </a>
+        
+        <!-- Non-major movies without MovieImages -->
+        <a href="/moviereviews/catchmeifyoucan.html" class="movie-card">
+          <img src="/assets/MovieImages/catchmeifyoucan.jpg" alt="Catch Me If You Can Poster">
+          <p>Catch Me If You Can (2002)</p>
+        </a>
+        <a href="/moviereviews/theaviator.html" class="movie-card">
+          <img src="/assets/MovieImages/theaviator.jpg" alt="The Aviator Poster">
+          <p>The Aviator (2004)</p>
+        </a>
+        <a href="/moviereviews/onceuponatimeinhollywood.html" class="movie-card">
+          <img src="/assets/MovieImages/onceuponatimeinhollywood.jpg" alt="Once Upon a Time in Hollywood Poster">
+          <p>Once Upon a Time in Hollywood (2019)</p>
+        </a>
+        <a href="/moviereviews/blooddiamond.html" class="movie-card">
+          <img src="/assets/MovieImages/blooddiamond.jpg" alt="Blood Diamond Poster">
+          <p>Blood Diamond (2006)</p>
+        </a>
+        <a href="/moviereviews/thebeach.html" class="movie-card">
+          <img src="/assets/MovieImages/thebeach.jpg" alt="The Beach Poster">
+          <p>The Beach (2000)</p>
+        </a>
+        <a href="/moviereviews/romeoandjuliet.html" class="movie-card">
+          <img src="/assets/MovieImages/romeoandjuliet.jpg" alt="Romeo + Juliet Poster">
+          <p>Romeo + Juliet (1996)</p>
+        </a>
+        <a href="/moviereviews/whatseatinggilbertgrape.html" class="movie-card">
+          <img src="/assets/MovieImages/whatseatinggilbertgrape.jpg" alt="What's Eating Gilbert Grape Poster">
+          <p>What's Eating Gilbert Grape (1993)</p>
+        </a>
+        <a href="/moviereviews/themanintheonemask.html" class="movie-card">
+          <img src="/assets/MovieImages/themanintheonemask.jpg" alt="The Man in the Iron Mask Poster">
+          <p>The Man in the Iron Mask (1998)</p>
         </a>
       </div>
     </section>
   </main>
 
-        <!-- Footer -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -161,8 +203,7 @@
   </footer>
 
   <script>
-  
-        // Mobile menu functionality
+    // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
@@ -205,8 +246,6 @@
         closeMobileMenu();
       }
     });
-;
-    
   </script>
 </body>
 </html>

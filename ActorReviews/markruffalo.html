@@ -6,8 +6,7 @@
   <title>Mark Ruffalo - Profile</title>
   <link rel="stylesheet" href="/ActorReviews/reviews.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -41,11 +40,11 @@
     </div>
   </nav>
   
-
-  
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-
+    <button class="close-menu" id="closeMenuBtn" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
     <ul class="mobile-nav-links">
       <li><a href="/index.html">Home</a></li>
       <li><a href="/movies.html">Movies</a></li>
@@ -64,7 +63,14 @@
       <div class="actor-info">
         <h1>Mark Ruffalo</h1>
         <p><strong>Date of Birth:</strong> November 22, 1967</p>
+        <p><strong>Location of Birth:</strong> Kenosha, Wisconsin, USA</p>
+        <p><strong>Height:</strong> 5'8" (173 cm)</p>
         <p class="bio">Mark Ruffalo is an Academy Award-nominated actor known for his naturalistic performances and versatility across independent films and major blockbusters. Best known for playing Bruce Banner/The Hulk in the Marvel Cinematic Universe, he has also delivered critically acclaimed performances in numerous dramatic roles.</p>
+        
+        <div class="early-career">
+          <h3>Early Career</h3>
+          <p>Mark Ruffalo began his acting career in the early 1990s, performing in numerous stage productions and small theater companies in Los Angeles. He co-founded the Orpheus Theatre Company and appeared in several off-Broadway productions. His breakthrough film role came in Kenneth Lonergan's <em>You Can Count On Me</em> (2000), for which he received critical acclaim and several award nominations. This performance established him as a talented character actor and opened doors to more significant roles in both independent films and mainstream Hollywood productions.</p>
+        </div>
       </div>
     </section>
 
@@ -85,61 +91,89 @@
 
     <!-- Filmography -->
     <section class="filmography">
-      <h2>Movies</h2>
+      <h2>Filmography</h2>
       <div class="movie-grid">
-        <a href="/MovieReviews/avengers.html" class="movie-card">
-          <img src="/assets/MovieImages/Avengers.jpg" alt="The Avengers Poster">
+        <!-- Major Movies with MovieImages -->
+        <a href="/moviereviews/theavengers.html" class="movie-card">
+          <img src="/assets/MovieImages/theavengers.jpg" alt="The Avengers Poster">
           <p>The Avengers (2012)</p>
         </a>
-        <a href="/MovieReviews/spotlight.html" class="movie-card">
-          <img src="/assets/MovieImages/Spotlight.jpg" alt="Spotlight Poster">
+        <a href="/moviereviews/spotlight.html" class="movie-card">
+          <img src="/assets/MovieImages/spotlight.jpg" alt="Spotlight Poster">
           <p>Spotlight (2015)</p>
         </a>
-        <a href="/MovieReviews/zodiac.html" class="movie-card">
-          <img src="/assets/MovieImages/Zodiac.jpg" alt="Zodiac Poster">
+        <a href="/moviereviews/zodiac.html" class="movie-card">
+          <img src="/assets/MovieImages/zodiac.jpg" alt="Zodiac Poster">
           <p>Zodiac (2007)</p>
         </a>
-        <a href="/MovieReviews/kids-all-right.html" class="movie-card">
-          <img src="/assets/MovieImages/TheKidsAreAllRight.jpg" alt="The Kids Are All Right Poster">
+        <a href="/moviereviews/thekidsareallright.html" class="movie-card">
+          <img src="/assets/MovieImages/thekidsareallright.jpg" alt="The Kids Are All Right Poster">
           <p>The Kids Are All Right (2010)</p>
         </a>
-        <a href="/MovieReviews/foxcatcher.html" class="movie-card">
-          <img src="/assets/MovieImages/Foxcatcher.jpg" alt="Foxcatcher Poster">
+        <a href="/moviereviews/foxcatcher.html" class="movie-card">
+          <img src="/assets/MovieImages/foxcatcher.jpg" alt="Foxcatcher Poster">
           <p>Foxcatcher (2014)</p>
         </a>
-        <a href="/MovieReviews/eternal-sunshine.html" class="movie-card">
-          <img src="/assets/MovieImages/EternalSunshine.jpg" alt="Eternal Sunshine of the Spotless Mind Poster">
+        <a href="/moviereviews/eternalsunshineofthespotlessmind.html" class="movie-card">
+          <img src="/assets/MovieImages/eternalsunshineofthespotlessmind.jpg" alt="Eternal Sunshine of the Spotless Mind Poster">
           <p>Eternal Sunshine of the Spotless Mind (2004)</p>
         </a>
-        <a href="/MovieReviews/begin-again.html" class="movie-card">
-          <img src="/assets/MovieImages/BeginAgain.jpg" alt="Begin Again Poster">
+        <a href="/moviereviews/beginagain.html" class="movie-card">
+          <img src="/assets/MovieImages/beginagain.jpg" alt="Begin Again Poster">
           <p>Begin Again (2013)</p>
         </a>
-        <a href="/MovieReviews/normal-heart.html" class="movie-card">
-          <img src="/assets/MovieImages/TheNormalHeart.jpg" alt="The Normal Heart Poster">
+        <a href="/moviereviews/thenormalheart.html" class="movie-card">
+          <img src="/assets/MovieImages/thenormalheart.jpg" alt="The Normal Heart Poster">
           <p>The Normal Heart (2014)</p>
         </a>
-        <a href="/MovieReviews/13-going-30.html" class="movie-card">
-          <img src="/assets/MovieImages/13GoingOn30.jpg" alt="13 Going on 30 Poster">
+        <a href="/moviereviews/13goingon30.html" class="movie-card">
+          <img src="/assets/MovieImages/13goingon30.jpg" alt="13 Going on 30 Poster">
           <p>13 Going on 30 (2004)</p>
         </a>
-        <a href="/MovieReviews/shutter-island.html" class="movie-card">
-          <img src="/assets/MovieImages/ShutterIsland.jpg" alt="Shutter Island Poster">
+        <a href="/moviereviews/shutterisland.html" class="movie-card">
+          <img src="/assets/MovieImages/shutterisland.jpg" alt="Shutter Island Poster">
           <p>Shutter Island (2010)</p>
         </a>
-        <a href="/MovieReviews/now-you-see-me.html" class="movie-card">
-          <img src="/assets/MovieImages/NowYouSeeMe.jpg" alt="Now You See Me Poster">
+        <a href="/moviereviews/nowyouseeme.html" class="movie-card">
+          <img src="/assets/MovieImages/nowyouseeme.jpg" alt="Now You See Me Poster">
           <p>Now You See Me (2013)</p>
         </a>
-        <a href="/MovieReviews/dark-waters.html" class="movie-card">
-          <img src="/assets/MovieImages/DarkWaters.jpg" alt="Dark Waters Poster">
+        <a href="/moviereviews/darkwaters.html" class="movie-card">
+          <img src="/assets/MovieImages/darkwaters.jpg" alt="Dark Waters Poster">
           <p>Dark Waters (2019)</p>
         </a>
+      </div>
+      
+      <!-- Non-major movies without images -->
+      <div class="text-movie-list">
+        <h3>Other Notable Films</h3>
+        <div class="text-movie-grid">
+          <a href="/moviereviews/avengersageofultron.html" class="text-movie-link">Avengers: Age of Ultron (2015)</a>
+          <a href="/moviereviews/avengersinfinitywar.html" class="text-movie-link">Avengers: Infinity War (2018)</a>
+          <a href="/moviereviews/avengersendgame.html" class="text-movie-link">Avengers: Endgame (2019)</a>
+          <a href="/moviereviews/thorragnarok.html" class="text-movie-link">Thor: Ragnarok (2017)</a>
+          <a href="/moviereviews/youcancountonme.html" class="text-movie-link">You Can Count On Me (2000)</a>
+          <a href="/moviereviews/mytwentyfirst.html" class="text-movie-link">My Life Without Me (2003)</a>
+          <a href="/moviereviews/welikeitlikeit.html" class="text-movie-link">We Don't Live Here Anymore (2004)</a>
+          <a href="/moviereviews/alltheprettyhorses.html" class="text-movie-link">All the Pretty Horses (2000)</a>
+          <a href="/moviereviews/thelastcastle.html" class="text-movie-link">The Last Castle (2001)</a>
+          <a href="/moviereviews/windtalkers.html" class="text-movie-link">Windtalkers (2002)</a>
+          <a href="/moviereviews/viewfromthetop.html" class="text-movie-link">View from the Top (2003)</a>
+          <a href="/moviereviews/collateral.html" class="text-movie-link">Collateral (2004)</a>
+          <a href="/moviereviews/justlikeheaven.html" class="text-movie-link">Just Like Heaven (2005)</a>
+          <a href="/moviereviews/reservationroad.html" class="text-movie-link">Reservation Road (2007)</a>
+          <a href="/moviereviews/thebrothersbloom.html" class="text-movie-link">The Brothers Bloom (2008)</a>
+          <a href="/moviereviews/whatdoesntkillyou.html" class="text-movie-link">What Doesn't Kill You (2008)</a>
+          <a href="/moviereviews/wherethewildthingsare.html" class="text-movie-link">Where the Wild Things Are (2009)</a>
+          <a href="/moviereviews/thedetails.html" class="text-movie-link">The Details (2011)</a>
+          <a href="/moviereviews/thanksforsharing.html" class="text-movie-link">Thanks for Sharing (2012)</a>
+          <a href="/moviereviews/infinitelypolarbear.html" class="text-movie-link">Infinitely Polar Bear (2014)</a>
+        </div>
       </div>
     </section>
   </main>
 
-            <!-- Footer -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -181,8 +215,7 @@
   </footer>
 
   <script>
-  
-        // Mobile menu functionality
+    // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
@@ -225,8 +258,6 @@
         closeMobileMenu();
       }
     });
-;
-    
   </script>
 </body>
 </html>

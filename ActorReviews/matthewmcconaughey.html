@@ -6,8 +6,7 @@
   <title>Matthew McConaughey - Profile</title>
   <link rel="stylesheet" href="/ActorReviews/reviews.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -41,11 +40,11 @@
     </div>
   </nav>
   
-
-  
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-
+    <button class="close-menu" id="closeMenuBtn" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
     <ul class="mobile-nav-links">
       <li><a href="/index.html">Home</a></li>
       <li><a href="/movies.html">Movies</a></li>
@@ -65,7 +64,14 @@
       <div class="actor-info">
         <h1>Matthew McConaughey</h1>
         <p><strong>Date of Birth:</strong> November 4, 1969</p>
+        <p><strong>Location of Birth:</strong> Uvalde, Texas, USA</p>
+        <p><strong>Height:</strong> 6'0" (183 cm)</p>
         <p class="bio">Matthew McConaughey is an Academy Award-winning actor known for his distinctive Southern charm and remarkable career transformation. After early success in romantic comedies, he underwent a career renaissance known as the "McConaissance" with critically acclaimed dramatic performances that established him as one of Hollywood's most respected actors.</p>
+        
+        <div class="early-career">
+          <h3>Early Career</h3>
+          <p>Matthew McConaughey began his acting career in the early 1990s after moving to Los Angeles. His breakthrough came with a supporting role in Richard Linklater's <em>Dazed and Confused</em> (1993), where his memorable line "alright, alright, alright" became iconic. He quickly transitioned to leading man status with roles in <em>A Time to Kill</em> (1996) and <em>Contact</em> (1997). Throughout the late 1990s and 2000s, he became known for romantic comedies like <em>How to Lose a Guy in 10 Days</em> (2003) and <em>Failure to Launch</em> (2006), before his dramatic career resurgence in the 2010s.</p>
+        </div>
       </div>
     </section>
 
@@ -84,61 +90,91 @@
 
     <!-- Filmography -->
     <section class="filmography">
-      <h2>Movies</h2>
+      <h2>Filmography</h2>
       <div class="movie-grid">
-        <a href="/MovieReviews/dallas-buyers-club.html" class="movie-card">
-          <img src="/assets/MovieImages/DallasBuyersClub.jpg" alt="Dallas Buyers Club Poster">
+        <!-- Major Movies with MovieImages -->
+        <a href="/moviereviews/dallasbuyersclub.html" class="movie-card">
+          <img src="/assets/MovieImages/dallasbuyersclub.jpg" alt="Dallas Buyers Club Poster">
           <p>Dallas Buyers Club (2013)</p>
         </a>
-        <a href="/MovieReviews/interstellar.html" class="movie-card">
-          <img src="/assets/MovieImages/Interstellar.jpg" alt="Interstellar Poster">
+        <a href="/moviereviews/interstellar.html" class="movie-card">
+          <img src="/assets/MovieImages/interstellar.jpg" alt="Interstellar Poster">
           <p>Interstellar (2014)</p>
         </a>
-        <a href="/MovieReviews/true-detective.html" class="movie-card">
-          <img src="/assets/MovieImages/TrueDetective.jpg" alt="True Detective Poster">
+        <a href="/moviereviews/truedetective.html" class="movie-card">
+          <img src="/assets/MovieImages/truedetective.jpg" alt="True Detective Poster">
           <p>True Detective (2014)</p>
         </a>
-        <a href="/MovieReviews/mud.html" class="movie-card">
-          <img src="/assets/MovieImages/Mud.jpg" alt="Mud Poster">
+        <a href="/moviereviews/mud.html" class="movie-card">
+          <img src="/assets/MovieImages/mud.jpg" alt="Mud Poster">
           <p>Mud (2012)</p>
         </a>
-        <a href="/MovieReviews/magic-mike.html" class="movie-card">
-          <img src="/assets/MovieImages/MagicMike.jpg" alt="Magic Mike Poster">
+        <a href="/moviereviews/magicmike.html" class="movie-card">
+          <img src="/assets/MovieImages/magicmike.jpg" alt="Magic Mike Poster">
           <p>Magic Mike (2012)</p>
         </a>
-        <a href="/MovieReviews/wolf-wallstreet.html" class="movie-card">
-          <img src="/assets/MovieImages/WolfofWallStreet.jpg" alt="The Wolf of Wall Street Poster">
+        <a href="/moviereviews/thewolfofwallstreet.html" class="movie-card">
+          <img src="/assets/MovieImages/thewolfofwallstreet.jpg" alt="The Wolf of Wall Street Poster">
           <p>The Wolf of Wall Street (2013)</p>
         </a>
-        <a href="/MovieReviews/contact.html" class="movie-card">
-          <img src="/assets/MovieImages/Contact.jpg" alt="Contact Poster">
+        <a href="/moviereviews/contact.html" class="movie-card">
+          <img src="/assets/MovieImages/contact.jpg" alt="Contact Poster">
           <p>Contact (1997)</p>
         </a>
-        <a href="/MovieReviews/ahaht.html" class="movie-card">
-          <img src="/assets/MovieImages/ATimeToKill.jpg" alt="A Time to Kill Poster">
+        <a href="/moviereviews/atimetokill.html" class="movie-card">
+          <img src="/assets/MovieImages/atimetokill.jpg" alt="A Time to Kill Poster">
           <p>A Time to Kill (1996)</p>
         </a>
-        <a href="/MovieReviews/amistad.html" class="movie-card">
-          <img src="/assets/MovieImages/Amistad.jpg" alt="Amistad Poster">
+        <a href="/moviereviews/amistad.html" class="movie-card">
+          <img src="/assets/MovieImages/amistad.jpg" alt="Amistad Poster">
           <p>Amistad (1997)</p>
         </a>
-        <a href="/MovieReviews/edtv.html" class="movie-card">
-          <img src="/assets/MovieImages/EDtv.jpg" alt="EDtv Poster">
+        <a href="/moviereviews/edtv.html" class="movie-card">
+          <img src="/assets/MovieImages/edtv.jpg" alt="EDtv Poster">
           <p>EDtv (1999)</p>
         </a>
-        <a href="/MovieReviews/ghosts-girlfriends.html" class="movie-card">
-          <img src="/assets/MovieImages/GhostsOfGirlfriendsPast.jpg" alt="Ghosts of Girlfriends Past Poster">
+        <a href="/moviereviews/ghostsofgirlfriendspast.html" class="movie-card">
+          <img src="/assets/MovieImages/ghostsofgirlfriendspast.jpg" alt="Ghosts of Girlfriends Past Poster">
           <p>Ghosts of Girlfriends Past (2009)</p>
         </a>
-        <a href="/MovieReviews/how-to-lose-a-guy.html" class="movie-card">
-          <img src="/assets/MovieImages/HowToLoseAGuy.jpg" alt="How to Lose a Guy in 10 Days Poster">
+        <a href="/moviereviews/howtoloseaguys.html" class="movie-card">
+          <img src="/assets/MovieImages/howtoloseaguys.jpg" alt="How to Lose a Guy in 10 Days Poster">
           <p>How to Lose a Guy in 10 Days (2003)</p>
         </a>
+      </div>
+      
+      <!-- Non-major movies without images -->
+      <div class="text-movie-list">
+        <h3>Other Notable Films</h3>
+        <div class="text-movie-grid">
+          <a href="/moviereviews/dazedandconfused.html" class="text-movie-link">Dazed and Confused (1993)</a>
+          <a href="/moviereviews/texaschainsawmassacre.html" class="text-movie-link">The Texas Chainsaw Massacre: The Next Generation (1994)</a>
+          <a href="/moviereviews/boysontheside.html" class="text-movie-link">Boys on the Side (1995)</a>
+          <a href="/moviereviews/largerthanlife.html" class="text-movie-link">Larger Than Life (1996)</a>
+          <a href="/moviereviews/angelasashes.html" class="text-movie-link">Angela's Ashes (1999)</a>
+          <a href="/moviereviews/u571.html" class="text-movie-link">U-571 (2000)</a>
+          <a href="/moviereviews/weddingplanner.html" class="text-movie-link">The Wedding Planner (2001)</a>
+          <a href="/moviereviews/failuretolaunch.html" class="text-movie-link">Failure to Launch (2006)</a>
+          <a href="/moviereviews/foolsgold.html" class="text-movie-link">Fool's Gold (2008)</a>
+          <a href="/moviereviews/surferdue.html" class="text-movie-link">Surfer, Dude (2008)</a>
+          <a href="/moviereviews/linconlawyer.html" class="text-movie-link">The Lincoln Lawyer (2011)</a>
+          <a href="/moviereviews/bernardandgenie.html" class="text-movie-link">Bernard and Genie (2011)</a>
+          <a href="/moviereviews/killerjoe.html" class="text-movie-link">Killer Joe (2011)</a>
+          <a href="/moviereviews/paperboy.html" class="text-movie-link">The Paperboy (2012)</a>
+          <a href="/moviereviews/seaoftrees.html" class="text-movie-link">The Sea of Trees (2015)</a>
+          <a href="/moviereviews/freestateofjones.html" class="text-movie-link">Free State of Jones (2016)</a>
+          <a href="/moviereviews/gold.html" class="text-movie-link">Gold (2016)</a>
+          <a href="/moviereviews/thedarktower.html" class="text-movie-link">The Dark Tower (2017)</a>
+          <a href="/moviereviews/whiteboyrick.html" class="text-movie-link">White Boy Rick (2018)</a>
+          <a href="/moviereviews/thebeachbum.html" class="text-movie-link">The Beach Bum (2019)</a>
+          <a href="/moviereviews/serenity.html" class="text-movie-link">Serenity (2019)</a>
+          <a href="/moviereviews/gentlemen.html" class="text-movie-link">The Gentlemen (2019)</a>
+        </div>
       </div>
     </section>
   </main>
 
-           <!-- Footer -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -180,8 +216,7 @@
   </footer>
 
   <script>
-  
-        // Mobile menu functionality
+    // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
@@ -224,8 +259,6 @@
         closeMobileMenu();
       }
     });
-;
-    
   </script>
 </body>
 </html>

@@ -6,8 +6,7 @@
   <title>Emma Stone - Profile</title>
   <link rel="stylesheet" href="/ActorReviews/reviews.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -41,11 +40,11 @@
     </div>
   </nav>
   
-
-  
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-
+    <button class="close-menu" id="closeMenuBtn" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
     <ul class="mobile-nav-links">
       <li><a href="/index.html">Home</a></li>
       <li><a href="/movies.html">Movies</a></li>
@@ -64,7 +63,14 @@
       <div class="actor-info">
         <h1>Emma Stone</h1>
         <p><strong>Date of Birth:</strong> November 6, 1988</p>
+        <p><strong>Location of Birth:</strong> Scottsdale, Arizona, USA</p>
+        <p><strong>Height:</strong> 5'6" (168 cm)</p>
         <p class="bio">Emma Stone is an Academy Award-winning actress known for her versatility and charismatic screen presence. Rising to fame with comedic roles, she has since demonstrated remarkable range in both dramatic and musical performances, establishing herself as one of Hollywood's most talented and beloved actresses.</p>
+        
+        <div class="early-career">
+          <h3>Early Career</h3>
+          <p>Emma Stone began her acting career in theater productions during her childhood in Arizona. At age 15, she convinced her parents to let her move to Los Angeles to pursue acting, creating a "Project Hollywood" PowerPoint presentation to make her case. Her first television roles were in guest appearances on shows like <em>Medium</em> and <em>Malcolm in the Middle</em>. Her breakthrough came with the teen comedy <em>Superbad</em> (2007), which launched her film career and established her as a rising comedic talent in Hollywood.</p>
+        </div>
       </div>
     </section>
 
@@ -84,53 +90,69 @@
 
     <!-- Filmography -->
     <section class="filmography">
-      <h2>Movies</h2>
+      <h2>Filmography</h2>
       <div class="movie-grid">
-        <a href="/MovieReviews/la-la-land.html" class="movie-card">
-          <img src="/assets/MovieImages/LaLaLand.jpg" alt="La La Land Poster">
+        <!-- Major Movies with MovieImages -->
+        <a href="/moviereviews/lalaland.html" class="movie-card">
+          <img src="/assets/MovieImages/lalaland.jpg" alt="La La Land Poster">
           <p>La La Land (2016)</p>
         </a>
-        <a href="/MovieReviews/poor-things.html" class="movie-card">
-          <img src="/assets/MovieImages/PoorThings.jpg" alt="Poor Things Poster">
+        <a href="/moviereviews/poorthings.html" class="movie-card">
+          <img src="/assets/MovieImages/poorthings.jpg" alt="Poor Things Poster">
           <p>Poor Things (2023)</p>
         </a>
-        <a href="/MovieReviews/the-help.html" class="movie-card">
-          <img src="/assets/MovieImages/TheHelp.jpg" alt="The Help Poster">
+        <a href="/moviereviews/thehelp.html" class="movie-card">
+          <img src="/assets/MovieImages/thehelp.jpg" alt="The Help Poster">
           <p>The Help (2011)</p>
         </a>
-        <a href="/MovieReviews/birdman.html" class="movie-card">
-          <img src="/assets/MovieImages/Birdman.jpg" alt="Birdman Poster">
+        <a href="/moviereviews/birdman.html" class="movie-card">
+          <img src="/assets/MovieImages/birdman.jpg" alt="Birdman Poster">
           <p>Birdman (2014)</p>
         </a>
-        <a href="/MovieReviews/the-favourite.html" class="movie-card">
-          <img src="/assets/MovieImages/TheFavourite.jpg" alt="The Favourite Poster">
+        <a href="/moviereviews/thefavourite.html" class="movie-card">
+          <img src="/assets/MovieImages/thefavourite.jpg" alt="The Favourite Poster">
           <p>The Favourite (2018)</p>
         </a>
-        <a href="/MovieReviews/easy-a.html" class="movie-card">
-          <img src="/assets/MovieImages/EasyA.jpg" alt="Easy A Poster">
+        <a href="/moviereviews/easya.html" class="movie-card">
+          <img src="/assets/MovieImages/easya.jpg" alt="Easy A Poster">
           <p>Easy A (2010)</p>
         </a>
-        <a href="/MovieReviews/cruella.html" class="movie-card">
-          <img src="/assets/MovieImages/Cruella.jpg" alt="Cruella Poster">
+        <a href="/moviereviews/cruella.html" class="movie-card">
+          <img src="/assets/MovieImages/cruella.jpg" alt="Cruella Poster">
           <p>Cruella (2021)</p>
         </a>
-        <a href="/MovieReviews/zombieland.html" class="movie-card">
-          <img src="/assets/MovieImages/Zombieland.jpg" alt="Zombieland Poster">
+        <a href="/moviereviews/zombieland.html" class="movie-card">
+          <img src="/assets/MovieImages/zombieland.jpg" alt="Zombieland Poster">
           <p>Zombieland (2009)</p>
         </a>
-        <a href="/MovieReviews/amazing-spiderman.html" class="movie-card">
-          <img src="/assets/MovieImages/AmazingSpiderman.jpg" alt="The Amazing Spider-Man Poster">
+        <a href="/moviereviews/theamazingspiderman.html" class="movie-card">
+          <img src="/assets/MovieImages/theamazingspiderman.jpg" alt="The Amazing Spider-Man Poster">
           <p>The Amazing Spider-Man (2012)</p>
         </a>
-        <a href="/MovieReviews/superbad.html" class="movie-card">
-          <img src="/assets/MovieImages/Superbad.jpg" alt="Superbad Poster">
+        <a href="/moviereviews/superbad.html" class="movie-card">
+          <img src="/assets/MovieImages/superbad.jpg" alt="Superbad Poster">
           <p>Superbad (2007)</p>
         </a>
+      </div>
+      
+      <!-- Non-major movies without images -->
+      <div class="text-movie-list">
+        <h3>Other Notable Films</h3>
+        <div class="text-movie-grid">
+          <a href="/moviereviews/crazystupidlove.html" class="text-movie-link">Crazy, Stupid, Love (2011)</a>
+          <a href="/moviereviews/theamazingspiderman2.html" class="text-movie-link">The Amazing Spider-Man 2 (2014)</a>
+          <a href="/moviereviews/alohaaloha.html" class="text-movie-link">Aloha (2015)</a>
+          <a href="/moviereviews/irrationalman.html" class="text-movie-link">Irrational Man (2015)</a>
+          <a href="/moviereviews/battleofthesexes.html" class="text-movie-link">Battle of the Sexes (2017)</a>
+          <a href="/moviereviews/maniac.html" class="text-movie-link">Maniac (2018)</a>
+          <a href="/moviereviews/zombielanddoubletap.html" class="text-movie-link">Zombieland: Double Tap (2019)</a>
+          <a href="/moviereviews/thecurse.html" class="text-movie-link">The Curse (2023)</a>
+        </div>
       </div>
     </section>
   </main>
 
-        <!-- Footer -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -172,8 +194,7 @@
   </footer>
 
   <script>
-  
-        // Mobile menu functionality
+    // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
@@ -216,8 +237,6 @@
         closeMobileMenu();
       }
     });
-;
-    
   </script>
 </body>
 </html>

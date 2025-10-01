@@ -6,8 +6,7 @@
   <title>Will Smith - Profile</title>
   <link rel="stylesheet" href="/ActorReviews/reviews.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -41,11 +40,11 @@
     </div>
   </nav>
   
-
-  
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-
+    <button class="close-menu" id="closeMenuBtn" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
     <ul class="mobile-nav-links">
       <li><a href="/index.html">Home</a></li>
       <li><a href="/movies.html">Movies</a></li>
@@ -64,7 +63,14 @@
       <div class="actor-info">
         <h1>Will Smith</h1>
         <p><strong>Date of Birth:</strong> September 25, 1968</p>
+        <p><strong>Location of Birth:</strong> Philadelphia, Pennsylvania, USA</p>
+        <p><strong>Height:</strong> 6'2" (188 cm)</p>
         <p class="bio">Will Smith is an Academy Award-winning actor, rapper, and producer who rose to fame as a hip-hop artist before becoming one of Hollywood's biggest movie stars. Known for his charismatic screen presence and ability to excel in both action blockbusters and dramatic roles, he has consistently been one of the most bankable stars in the industry.</p>
+        
+        <div class="early-career">
+          <h3>Early Career</h3>
+          <p>Will Smith began his entertainment career as a rapper, forming the duo DJ Jazzy Jeff & The Fresh Prince with childhood friend Jeffrey Townes. They achieved massive success in the late 1980s with hits like "Parents Just Don't Understand" and "Summertime," winning the first Grammy Award for Best Rap Performance in 1989. His television breakthrough came with the NBC sitcom <em>The Fresh Prince of Bel-Air</em> (1990-1996), which launched him to mainstream fame. He transitioned to film with <em>Where the Day Takes You</em> (1992) and <em>Made in America</em> (1993), but his major film breakthrough came with <em>Bad Boys</em> (1995) and <em>Independence Day</em> (1996), establishing him as a major Hollywood star.</p>
+        </div>
       </div>
     </section>
 
@@ -86,69 +92,97 @@
 
     <!-- Filmography -->
     <section class="filmography">
-      <h2>Movies</h2>
+      <h2>Filmography</h2>
       <div class="movie-grid">
-        <a href="/MovieReviews/independence-day.html" class="movie-card">
-          <img src="/assets/MovieImages/IndependenceDay.jpg" alt="Independence Day Poster">
+        <!-- Major Movies with MovieImages -->
+        <a href="/moviereviews/independenceday.html" class="movie-card">
+          <img src="/assets/MovieImages/independenceday.jpg" alt="Independence Day Poster">
           <p>Independence Day (1996)</p>
         </a>
-        <a href="/movie-reviews/men-in-black.html" class="movie-card">
-          <img src="/assets/MovieImages/MenInBlack.jpg" alt="Men in Black Poster">
+        <a href="/moviereviews/meninblack.html" class="movie-card">
+          <img src="/assets/MovieImages/meninblack.jpg" alt="Men in Black Poster">
           <p>Men in Black Series (1997-2012)</p>
         </a>
-        <a href="/MovieReviews/ali.html" class="movie-card">
-          <img src="/assets/MovieImages/Ali.jpg" alt="Ali Poster">
+        <a href="/moviereviews/ali.html" class="movie-card">
+          <img src="/assets/MovieImages/ali.jpg" alt="Ali Poster">
           <p>Ali (2001)</p>
         </a>
-        <a href="/MovieReviews/pursuit-happyness.html" class="movie-card">
-          <img src="/assets/MovieImages/ThePursuitOfHappyness.jpg" alt="The Pursuit of Happyness Poster">
+        <a href="/moviereviews/thepursuitofhappyness.html" class="movie-card">
+          <img src="/assets/MovieImages/thepursuitofhappyness.jpg" alt="The Pursuit of Happyness Poster">
           <p>The Pursuit of Happyness (2006)</p>
         </a>
-        <a href="/MovieReviews/i-am-legend.html" class="movie-card">
-          <img src="/assets/MovieImages/IAmLegend.jpg" alt="I Am Legend Poster">
+        <a href="/moviereviews/iamlegend.html" class="movie-card">
+          <img src="/assets/MovieImages/iamlegend.jpg" alt="I Am Legend Poster">
           <p>I Am Legend (2007)</p>
         </a>
-        <a href="/MovieReviews/hancock.html" class="movie-card">
-          <img src="/assets/MovieImages/Hancock.jpg" alt="Hancock Poster">
+        <a href="/moviereviews/hancock.html" class="movie-card">
+          <img src="/assets/MovieImages/hancock.jpg" alt="Hancock Poster">
           <p>Hancock (2008)</p>
         </a>
-        <a href="/MovieReviews/seven-pounds.html" class="movie-card">
-          <img src="/assets/MovieImages/SevenPounds.jpg" alt="Seven Pounds Poster">
+        <a href="/moviereviews/sevenpounds.html" class="movie-card">
+          <img src="/assets/MovieImages/sevenpounds.jpg" alt="Seven Pounds Poster">
           <p>Seven Pounds (2008)</p>
         </a>
-        <a href="/MovieReviews/bad-boys.html" class="movie-card">
-          <img src="/assets/MovieImages/BadBoys.jpg" alt="Bad Boys Poster">
+        <a href="/moviereviews/badboys.html" class="movie-card">
+          <img src="/assets/MovieImages/badboys.jpg" alt="Bad Boys Poster">
           <p>Bad Boys Series (1995-2020)</p>
         </a>
-        <a href="/MovieReviews/enemy-of-state.html" class="movie-card">
-          <img src="/assets/MovieImages/EnemyOfTheState.jpg" alt="Enemy of the State Poster">
+        <a href="/moviereviews/enemyofthestate.html" class="movie-card">
+          <img src="/assets/MovieImages/enemyofthestate.jpg" alt="Enemy of the State Poster">
           <p>Enemy of the State (1998)</p>
         </a>
-        <a href="/MovieReviews/wild-wild-west.html" class="movie-card">
-          <img src="/assets/MovieImages/WildWildWest.jpg" alt="Wild Wild West Poster">
+        <a href="/moviereviews/wildwildwest.html" class="movie-card">
+          <img src="/assets/MovieImages/wildwildwest.jpg" alt="Wild Wild West Poster">
           <p>Wild Wild West (1999)</p>
         </a>
-        <a href="/MovieReviews/concussion.html" class="movie-card">
-          <img src="/assets/MovieImages/Concussion.jpg" alt="Concussion Poster">
+        <a href="/moviereviews/concussion.html" class="movie-card">
+          <img src="/assets/MovieImages/concussion.jpg" alt="Concussion Poster">
           <p>Concussion (2015)</p>
         </a>
-        <a href="/MovieReviews/suicide-squad.html" class="movie-card">
-          <img src="/assets/MovieImages/SuicideSquad.jpg" alt="Suicide Squad Poster">
+        <a href="/moviereviews/suicidesquad.html" class="movie-card">
+          <img src="/assets/MovieImages/suicidesquad.jpg" alt="Suicide Squad Poster">
           <p>Suicide Squad (2016)</p>
         </a>
-        <a href="/MovieReviews/aladdin.html" class="movie-card">
-          <img src="/assets/MovieImages/Aladdin.jpg" alt="Aladdin Poster">
+        <a href="/moviereviews/aladdin.html" class="movie-card">
+          <img src="/assets/MovieImages/aladdin.jpg" alt="Aladdin Poster">
           <p>Aladdin (2019)</p>
         </a>
-        <a href="/MovieReviews/king-richard.html" class="movie-card">
-          <img src="/assets/MovieImages/KingRichard.jpg" alt="King Richard Poster">
+        <a href="/moviereviews/kingrichard.html" class="movie-card">
+          <img src="/assets/MovieImages/kingrichard.jpg" alt="King Richard Poster">
           <p>King Richard (2021)</p>
         </a>
+      </div>
+      
+      <!-- Non-major movies without images -->
+      <div class="text-movie-list">
+        <h3>Other Notable Films</h3>
+        <div class="text-movie-grid">
+          <a href="/moviereviews/wherethedaytakesyou.html" class="text-movie-link">Where the Day Takes You (1992)</a>
+          <a href="/moviereviews/madeinamerica.html" class="text-movie-link">Made in America (1993)</a>
+          <a href="/moviereviews/sixdegreesseparation.html" class="text-movie-link">Six Degrees of Separation (1993)</a>
+          <a href="/moviereviews/badboys2.html" class="text-movie-link">Bad Boys II (2003)</a>
+          <a href="/moviereviews/meninblack2.html" class="text-movie-link">Men in Black II (2002)</a>
+          <a href="/moviereviews/meninblack3.html" class="text-movie-link">Men in Black 3 (2012)</a>
+          <a href="/moviereviews/sharktale.html" class="text-movie-link">Shark Tale (2004)</a>
+          <a href="/moviereviews/hitch.html" class="text-movie-link">Hitch (2005)</a>
+          <a href="/moviereviews/thelegendofbagger.html" class="text-movie-link">The Legend of Bagger Vance (2000)</a>
+          <a href="/moviereviews/iamrobot.html" class="text-movie-link">I, Robot (2004)</a>
+          <a href="/moviereviews/theshaggy.html" class="text-movie-link">The Shaggy Dog (2006)</a>
+          <a href="/moviereviews/tonighthescomes.html" class="text-movie-link">The Tonight Show (2007)</a>
+          <a href="/moviereviews/seventimelucky.html" class="text-movie-link">Seven Pounds (2008)</a>
+          <a href="/moviereviews/entourage.html" class="text-movie-link">Entourage (2015)</a>
+          <a href="/moviereviews/focus.html" class="text-movie-link">Focus (2015)</a>
+          <a href="/moviereviews/collateralbeauty.html" class="text-movie-link">Collateral Beauty (2016)</a>
+          <a href="/moviereviews/bright.html" class="text-movie-link">Bright (2017)</a>
+          <a href="/moviereviews/gemini.html" class="text-movie-link">Gemini Man (2019)</a>
+          <a href="/moviereviews/badboysforlife.html" class="text-movie-link">Bad Boys for Life (2020)</a>
+          <a href="/moviereviews/emancipation.html" class="text-movie-link">Emancipation (2022)</a>
+        </div>
       </div>
     </section>
   </main>
 
-     <!-- Footer -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -190,8 +224,7 @@
   </footer>
 
   <script>
-  
-        // Mobile menu functionality
+    // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
@@ -234,8 +267,6 @@
         closeMobileMenu();
       }
     });
-;
-    
   </script>
 </body>
 </html>

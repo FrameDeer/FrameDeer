@@ -1034,6 +1034,7 @@ a:hover {
 
 .blog-links a {
   color: var(--foreground);
+  margin-left: 4px;
   transition: color 0.3s;
 }
 
@@ -1081,7 +1082,6 @@ a:hover {
     padding: 1.5rem;
   }
 }
-
 
 /* Episodes Section */
 .episodes {
